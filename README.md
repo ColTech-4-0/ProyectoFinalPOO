@@ -48,4 +48,10 @@ El sistema tiene los siguientes requerimientos:
 *	Documentar el código, agregar comentarios para facilitar la interpretación del código.
 ## DIAGRAMA DE CLASES 
 ![Diagrama de clases](https://github.com/user-attachments/assets/c0f902ec-7cb3-4fb3-a908-4bf349709022)
+## GRUPO 
+* Antonio Cardona
+* Jeisson Guarin
+* Leda van Grieken
+* Omar Mendez
+  
 
