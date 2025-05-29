@@ -46,6 +46,26 @@ El sistema tiene los siguientes requerimientos:
 ## CONSIDERACIONES 
 *	Diseño modular del software, es decir, uso de estructuras de clases.
 *	Documentar el código, agregar comentarios para facilitar la interpretación del código.
+## REQUERIMIENTOS
+Se entiende por requerimientos al conjunto de características que el sistema debe cumplir o satisfacer para que sea aceptado por el cliente.
+A continuación, se representa como quedaron definidos los requerimientos:
+### Requerimientos Funcionales
+* RF1. El sistema debe permitir acceder a los usuarios registrados, mediante el ingreso de su documento y nickname
+* RF2. El sistema debe permitir registrar nuevos usuarios, la información que se debe almacenar del usuario es la siguiente: nombre, documento, nickname, cargo (ingeniero tecnico, Administrador), una fecha de inicio y fin de contrato para ingeniero técnico.
+* RF3. El sistema debe permitir modificar información de los usuarios únicamente al administrador, la información que se podrá modificar será: habilitar o deshabilitar los permisos para que los ingenieros y técnicos entren a modificar el estado de los equipos.
+* El sistema deberá permitir buscar un usuario por el campo documento.
+* ----------
+* --------- falta completar Requerimientos
+  
+
+  
+  - Nombre del equipo.
+  - Marca del equipo.
+  - Placa del equipo.
+  - Función del equipo.
+  - Estado del equipo. 
+
+### Requerimientos No funcionales 
 ## DIAGRAMA DE CLASES 
 ![Diagrama de clases](https://github.com/user-attachments/assets/c0f902ec-7cb3-4fb3-a908-4bf349709022)
 ## GRUPO 
