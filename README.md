@@ -56,6 +56,7 @@ A continuación, se representa como quedaron definidos los requerimientos:
 * El sistema deberá permitir buscar un usuario por el campo documento.
 * ----------
 * --------- falta completar Requerimientos
+* ---------
   
 
   
