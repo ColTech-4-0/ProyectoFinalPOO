@@ -68,7 +68,11 @@ A continuación, se representa como quedaron definidos los requerimientos:
 
 ### Requerimientos No funcionales 
 ## DIAGRAMA DE CLASES 
+### Primer diagrama
 ![Diagrama de clases](https://github.com/user-attachments/assets/c0f902ec-7cb3-4fb3-a908-4bf349709022)
+### Segundo diagrama - Ampliado
+![Diagrama de clases - Ampliado](https://github.com/user-attachments/assets/41a45030-7129-4533-a6a9-a0eb7e5eaf5c)
+
 ## GRUPO 
 * Antonio Cardona
 * Jeisson Guarin
