@@ -1,0 +1,248 @@
+package com.coltech4.gestormantenimiento;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+
+
+public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
+       private BaseDeDatos BaseDatos;
+       private Administrador admin;
+    
+    //private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazOpcionesAdministrador.class.getName());
+
+   
+    public InterfazOpcionesAdministrador() {
+        // Inicializa los componentes de la interfaz gráfica
+        initComponents();
+        
+    }
+
+    public void setBaseDeDatos(BaseDeDatos bd){  
+           this.BaseDatos = bd;
+    }
+    
+    public void setAdministrador(Administrador admin) {
+    this.admin = admin;
+}
+
+    
+    
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        xExit = new javax.swing.JLabel();
+        RegistrarJefeEnfermeria = new javax.swing.JButton();
+        InicioSecionLabel = new javax.swing.JLabel();
+        VizDatosJefeEnfermeria = new javax.swing.JButton();
+        FechaMantenimiento = new javax.swing.JButton();
+        RegistrarEquipo1 = new javax.swing.JButton();
+        RegistrarIng = new javax.swing.JButton();
+        ModPermisosIng1 = new javax.swing.JButton();
+        ModEstadoEquipo1 = new javax.swing.JButton();
+        VizDatosEquipo1 = new javax.swing.JButton();
+        VizDatosIng = new javax.swing.JButton();
+        InicioSecionLabel1 = new javax.swing.JLabel();
+        InicioSecionLabel2 = new javax.swing.JLabel();
+        InicioSecionLabel3 = new javax.swing.JLabel();
+        FondoInterfazRAdministrador = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1022, 667));
+
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1000, 630));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        xExit.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        xExit.setForeground(new java.awt.Color(255, 255, 255));
+        xExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        xExit.setText("X");
+        xExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                xExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                xExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                xExitMouseExited(evt);
+            }
+        });
+        jPanel1.add(xExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, 30, 30));
+
+        RegistrarJefeEnfermeria.setBackground(new java.awt.Color(3, 155, 215));
+        RegistrarJefeEnfermeria.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        RegistrarJefeEnfermeria.setForeground(new java.awt.Color(255, 255, 255));
+        RegistrarJefeEnfermeria.setText("Registrar");
+        RegistrarJefeEnfermeria.setBorder(null);
+        RegistrarJefeEnfermeria.setFocusPainted(false);
+        RegistrarJefeEnfermeria.setOpaque(true);
+        RegistrarJefeEnfermeria.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(RegistrarJefeEnfermeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 190, 170, 50));
+
+        InicioSecionLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
+        InicioSecionLabel.setForeground(new java.awt.Color(49, 153, 214));
+        InicioSecionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InicioSecionLabel.setText("INGENIERO");
+        jPanel1.add(InicioSecionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 320, 40));
+
+        VizDatosJefeEnfermeria.setBackground(new java.awt.Color(3, 155, 215));
+        VizDatosJefeEnfermeria.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        VizDatosJefeEnfermeria.setForeground(new java.awt.Color(255, 255, 255));
+        VizDatosJefeEnfermeria.setText("Visualizar Datos");
+        VizDatosJefeEnfermeria.setBorder(null);
+        VizDatosJefeEnfermeria.setFocusPainted(false);
+        VizDatosJefeEnfermeria.setOpaque(true);
+        VizDatosJefeEnfermeria.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(VizDatosJefeEnfermeria, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 170, 50));
+
+        FechaMantenimiento.setBackground(new java.awt.Color(3, 155, 215));
+        FechaMantenimiento.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        FechaMantenimiento.setForeground(new java.awt.Color(255, 255, 255));
+        FechaMantenimiento.setText("Asignar Fecha Mantenimiento");
+        FechaMantenimiento.setBorder(null);
+        FechaMantenimiento.setFocusPainted(false);
+        FechaMantenimiento.setOpaque(true);
+        FechaMantenimiento.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(FechaMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 270, 50));
+
+        RegistrarEquipo1.setBackground(new java.awt.Color(3, 155, 215));
+        RegistrarEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        RegistrarEquipo1.setForeground(new java.awt.Color(255, 255, 255));
+        RegistrarEquipo1.setText("Registrar");
+        RegistrarEquipo1.setBorder(null);
+        RegistrarEquipo1.setFocusPainted(false);
+        RegistrarEquipo1.setOpaque(true);
+        RegistrarEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
+        RegistrarEquipo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarEquipo1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(RegistrarEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, 170, 50));
+
+        RegistrarIng.setBackground(new java.awt.Color(3, 155, 215));
+        RegistrarIng.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        RegistrarIng.setForeground(new java.awt.Color(255, 255, 255));
+        RegistrarIng.setText("Registrar");
+        RegistrarIng.setBorder(null);
+        RegistrarIng.setFocusPainted(false);
+        RegistrarIng.setOpaque(true);
+        RegistrarIng.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(RegistrarIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 170, 50));
+
+        ModPermisosIng1.setBackground(new java.awt.Color(3, 155, 215));
+        ModPermisosIng1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        ModPermisosIng1.setForeground(new java.awt.Color(255, 255, 255));
+        ModPermisosIng1.setText("Modificar Permisos");
+        ModPermisosIng1.setBorder(null);
+        ModPermisosIng1.setFocusPainted(false);
+        ModPermisosIng1.setOpaque(true);
+        ModPermisosIng1.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(ModPermisosIng1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 170, 50));
+
+        ModEstadoEquipo1.setBackground(new java.awt.Color(3, 155, 215));
+        ModEstadoEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        ModEstadoEquipo1.setForeground(new java.awt.Color(255, 255, 255));
+        ModEstadoEquipo1.setText("Modificar Estado");
+        ModEstadoEquipo1.setBorder(null);
+        ModEstadoEquipo1.setFocusPainted(false);
+        ModEstadoEquipo1.setOpaque(true);
+        ModEstadoEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(ModEstadoEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 170, 50));
+
+        VizDatosEquipo1.setBackground(new java.awt.Color(3, 155, 215));
+        VizDatosEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        VizDatosEquipo1.setForeground(new java.awt.Color(255, 255, 255));
+        VizDatosEquipo1.setText("Visualizar Datos");
+        VizDatosEquipo1.setBorder(null);
+        VizDatosEquipo1.setFocusPainted(false);
+        VizDatosEquipo1.setOpaque(true);
+        VizDatosEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(VizDatosEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, 170, 50));
+
+        VizDatosIng.setBackground(new java.awt.Color(3, 155, 215));
+        VizDatosIng.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        VizDatosIng.setForeground(new java.awt.Color(255, 255, 255));
+        VizDatosIng.setText("Visualizar Datos");
+        VizDatosIng.setBorder(null);
+        VizDatosIng.setFocusPainted(false);
+        VizDatosIng.setOpaque(true);
+        VizDatosIng.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(VizDatosIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 170, 50));
+
+        InicioSecionLabel1.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
+        InicioSecionLabel1.setForeground(new java.awt.Color(49, 153, 214));
+        InicioSecionLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InicioSecionLabel1.setText("JEFE DE ENFERMERIA");
+        jPanel1.add(InicioSecionLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 320, 40));
+
+        InicioSecionLabel2.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
+        InicioSecionLabel2.setForeground(new java.awt.Color(49, 153, 214));
+        InicioSecionLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InicioSecionLabel2.setText("Opciones Administrador");
+        jPanel1.add(InicioSecionLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 320, 40));
+
+        InicioSecionLabel3.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
+        InicioSecionLabel3.setForeground(new java.awt.Color(49, 153, 214));
+        InicioSecionLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        InicioSecionLabel3.setText("EQUIPO");
+        jPanel1.add(InicioSecionLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 320, 40));
+
+        FondoInterfazRAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoOpciones.jpg"))); // NOI18N
+        jPanel1.add(FondoInterfazRAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 37, Short.MAX_VALUE))
+        );
+
+        pack();
+    }// </editor-fold>//GEN-END:initComponents
+
+    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
+        this.setVisible(false);
+    }//GEN-LAST:event_xExitMouseClicked
+
+    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
+        xExit.setForeground(Color.black);
+    }//GEN-LAST:event_xExitMouseEntered
+
+    private void xExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseExited
+        xExit.setForeground(Color.white);
+    }//GEN-LAST:event_xExitMouseExited
+
+    private void RegistrarEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarEquipo1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RegistrarEquipo1ActionPerformed
+
+    
+   
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton FechaMantenimiento;
+    private javax.swing.JLabel FondoInterfazRAdministrador;
+    private javax.swing.JLabel InicioSecionLabel;
+    private javax.swing.JLabel InicioSecionLabel1;
+    private javax.swing.JLabel InicioSecionLabel2;
+    private javax.swing.JLabel InicioSecionLabel3;
+    private javax.swing.JButton ModEstadoEquipo1;
+    private javax.swing.JButton ModPermisosIng1;
+    private javax.swing.JButton RegistrarEquipo1;
+    private javax.swing.JButton RegistrarIng;
+    private javax.swing.JButton RegistrarJefeEnfermeria;
+    private javax.swing.JButton VizDatosEquipo1;
+    private javax.swing.JButton VizDatosIng;
+    private javax.swing.JButton VizDatosJefeEnfermeria;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel xExit;
+    // End of variables declaration//GEN-END:variables
+}
