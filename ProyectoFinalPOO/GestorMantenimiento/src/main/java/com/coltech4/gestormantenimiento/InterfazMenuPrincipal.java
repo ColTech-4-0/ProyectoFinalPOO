@@ -190,7 +190,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
 
     private void BotonOpcionesIngenieroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOpcionesIngenieroActionPerformed
         this.BaseDatos.MostrarOpcionesIngeniero();
-    }                 
+                
         
     }//GEN-LAST:event_BotonOpcionesIngenieroActionPerformed
      
