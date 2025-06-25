@@ -1,6 +1,7 @@
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador.class
 com\coltech4\gestormantenimiento\InterfazLoginIngeniero$2.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$5.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$3.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$1.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$2.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$7.class
@@ -10,6 +11,7 @@ com\coltech4\gestormantenimiento\InterfazLoginIngeniero$5.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$3.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$4.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$6.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$6.class
 com\coltech4\gestormantenimiento\Administrador.class
@@ -28,14 +30,19 @@ com\coltech4\gestormantenimiento\InterfazLoginIngeniero$1.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$3.class
 com\coltech4\gestormantenimiento\Ingenieros.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$4.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$2.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$7.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$5.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$3.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$4.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$7.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$6.class
+com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$5.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$2.class
 com\coltech4\gestormantenimiento\InterfazOpcionesAdministrador$2.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$4.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$1.class
 com\coltech4\gestormantenimiento\Persona.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$6.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador.class
@@ -45,6 +52,7 @@ com\coltech4\gestormantenimiento\InterfazLoginAdministrador$1.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal.class
 com\coltech4\gestormantenimiento\JefeEnfermeria.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$1.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$4.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$1.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$3.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$5.class

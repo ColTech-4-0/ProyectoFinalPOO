@@ -94,6 +94,7 @@ public class InterfazRegistrarAdministrador extends javax.swing.JFrame {
         NicknameLabel.setText("Nickname");
         jPanel1.add(NicknameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 340, 140, -1));
 
+        Nombre.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         Nombre.setBorder(null);
         Nombre.setPreferredSize(new java.awt.Dimension(108, 38));
         Nombre.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -103,6 +104,7 @@ public class InterfazRegistrarAdministrador extends javax.swing.JFrame {
         });
         jPanel1.add(Nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 200, 200, 30));
 
+        Documento.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         Documento.setBorder(null);
         Documento.setPreferredSize(new java.awt.Dimension(108, 38));
         Documento.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -112,6 +114,7 @@ public class InterfazRegistrarAdministrador extends javax.swing.JFrame {
         });
         jPanel1.add(Documento, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 200, 30));
 
+        Nickname.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         Nickname.setBorder(null);
         Nickname.setPreferredSize(new java.awt.Dimension(108, 38));
         jPanel1.add(Nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, 200, 30));

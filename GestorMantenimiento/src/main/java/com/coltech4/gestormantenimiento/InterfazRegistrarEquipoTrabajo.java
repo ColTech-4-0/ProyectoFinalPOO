@@ -24,7 +24,7 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
        // Este método nos permite recibir la instancia de BaseDeDatos creada en la interfaz Menu Principal
        // Así no se crea una nueva, sino que se reutiliza la que ya tiene toda la información del sistema
        this.BaseDatos = bd;
-       CampoCargo.setText("Ingeniero Tecnico");
+       CampoCargo.setText("Ingeniero");
        CampoCargo.enable(false);
     }
     

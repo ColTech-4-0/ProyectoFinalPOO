@@ -212,18 +212,8 @@ public class InterfazOpcionesIngeniero extends javax.swing.JFrame {
     }//GEN-LAST:event_xExitMouseExited
 
     private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
-        int opcion = JOptionPane.showConfirmDialog(
-            rootPane, // Componente raíz de la ventana actual
-            "¿Estás seguro de que deseas salir?", // Mensaje que se mostrará
-            "Confirmar salida", // Título del cuadro de diálogo
-            JOptionPane.YES_NO_OPTION, // Opciones: Sí / No
-            JOptionPane.QUESTION_MESSAGE// Ícono de signo de pregunta
-            );
-
-        // Si el usuario elige "Sí", se cierra la aplicación
-        if (opcion == JOptionPane.YES_OPTION) {
-            System.exit(0);
-        }
+        this.setVisible(false);
+        
     }//GEN-LAST:event_xExitMouseClicked
 
     private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed

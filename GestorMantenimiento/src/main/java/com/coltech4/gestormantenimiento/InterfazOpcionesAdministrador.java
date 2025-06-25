@@ -39,9 +39,15 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         RegistrarEquipo1 = new javax.swing.JButton();
         RegistrarIng = new javax.swing.JButton();
         ModPermisosIng1 = new javax.swing.JButton();
-        ModEstadoEquipo1 = new javax.swing.JButton();
+        BotonVisualizarDatosPropios = new javax.swing.JButton();
         VizDatosEquipo1 = new javax.swing.JButton();
         VizDatosIng = new javax.swing.JButton();
+        ModEstadoEquipo2 = new javax.swing.JButton();
+        BotonRegresar = new javax.swing.JButton();
+        Separador1 = new javax.swing.JSeparator();
+        Separador2 = new javax.swing.JSeparator();
+        Separador3 = new javax.swing.JSeparator();
+        Separador4 = new javax.swing.JSeparator();
         InicioSecionLabel1 = new javax.swing.JLabel();
         InicioSecionLabel2 = new javax.swing.JLabel();
         InicioSecionLabel3 = new javax.swing.JLabel();
@@ -77,6 +83,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         RegistrarJefeEnfermeria.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarJefeEnfermeria.setText("Registrar");
         RegistrarJefeEnfermeria.setBorder(null);
+        RegistrarJefeEnfermeria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RegistrarJefeEnfermeria.setFocusPainted(false);
         RegistrarJefeEnfermeria.setOpaque(true);
         RegistrarJefeEnfermeria.setPreferredSize(new java.awt.Dimension(225, 25));
@@ -93,6 +100,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         VizDatosJefeEnfermeria.setForeground(new java.awt.Color(255, 255, 255));
         VizDatosJefeEnfermeria.setText("Visualizar Datos");
         VizDatosJefeEnfermeria.setBorder(null);
+        VizDatosJefeEnfermeria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VizDatosJefeEnfermeria.setFocusPainted(false);
         VizDatosJefeEnfermeria.setOpaque(true);
         VizDatosJefeEnfermeria.setPreferredSize(new java.awt.Dimension(225, 25));
@@ -103,16 +111,18 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         FechaMantenimiento.setForeground(new java.awt.Color(255, 255, 255));
         FechaMantenimiento.setText("Asignar Fecha Mantenimiento");
         FechaMantenimiento.setBorder(null);
+        FechaMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         FechaMantenimiento.setFocusPainted(false);
         FechaMantenimiento.setOpaque(true);
         FechaMantenimiento.setPreferredSize(new java.awt.Dimension(225, 25));
-        jPanel1.add(FechaMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 430, 270, 50));
+        jPanel1.add(FechaMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 270, 50));
 
         RegistrarEquipo1.setBackground(new java.awt.Color(3, 155, 215));
         RegistrarEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
         RegistrarEquipo1.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarEquipo1.setText("Registrar");
         RegistrarEquipo1.setBorder(null);
+        RegistrarEquipo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RegistrarEquipo1.setFocusPainted(false);
         RegistrarEquipo1.setOpaque(true);
         RegistrarEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
@@ -128,6 +138,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         RegistrarIng.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarIng.setText("Registrar");
         RegistrarIng.setBorder(null);
+        RegistrarIng.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RegistrarIng.setFocusPainted(false);
         RegistrarIng.setOpaque(true);
         RegistrarIng.setPreferredSize(new java.awt.Dimension(225, 25));
@@ -143,26 +154,29 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         ModPermisosIng1.setForeground(new java.awt.Color(255, 255, 255));
         ModPermisosIng1.setText("Modificar Permisos");
         ModPermisosIng1.setBorder(null);
+        ModPermisosIng1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ModPermisosIng1.setFocusPainted(false);
         ModPermisosIng1.setOpaque(true);
         ModPermisosIng1.setPreferredSize(new java.awt.Dimension(225, 25));
-        jPanel1.add(ModPermisosIng1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, 170, 50));
+        jPanel1.add(ModPermisosIng1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 170, 50));
 
-        ModEstadoEquipo1.setBackground(new java.awt.Color(3, 155, 215));
-        ModEstadoEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
-        ModEstadoEquipo1.setForeground(new java.awt.Color(255, 255, 255));
-        ModEstadoEquipo1.setText("Modificar Estado");
-        ModEstadoEquipo1.setBorder(null);
-        ModEstadoEquipo1.setFocusPainted(false);
-        ModEstadoEquipo1.setOpaque(true);
-        ModEstadoEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
-        jPanel1.add(ModEstadoEquipo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 170, 50));
+        BotonVisualizarDatosPropios.setBackground(new java.awt.Color(3, 155, 215));
+        BotonVisualizarDatosPropios.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonVisualizarDatosPropios.setForeground(new java.awt.Color(255, 255, 255));
+        BotonVisualizarDatosPropios.setText("Regresar");
+        BotonVisualizarDatosPropios.setBorder(null);
+        BotonVisualizarDatosPropios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonVisualizarDatosPropios.setFocusPainted(false);
+        BotonVisualizarDatosPropios.setOpaque(true);
+        BotonVisualizarDatosPropios.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(BotonVisualizarDatosPropios, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 170, 50));
 
         VizDatosEquipo1.setBackground(new java.awt.Color(3, 155, 215));
         VizDatosEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
         VizDatosEquipo1.setForeground(new java.awt.Color(255, 255, 255));
         VizDatosEquipo1.setText("Visualizar Datos");
         VizDatosEquipo1.setBorder(null);
+        VizDatosEquipo1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VizDatosEquipo1.setFocusPainted(false);
         VizDatosEquipo1.setOpaque(true);
         VizDatosEquipo1.setPreferredSize(new java.awt.Dimension(225, 25));
@@ -173,28 +187,79 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         VizDatosIng.setForeground(new java.awt.Color(255, 255, 255));
         VizDatosIng.setText("Visualizar Datos");
         VizDatosIng.setBorder(null);
+        VizDatosIng.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         VizDatosIng.setFocusPainted(false);
         VizDatosIng.setOpaque(true);
         VizDatosIng.setPreferredSize(new java.awt.Dimension(225, 25));
         jPanel1.add(VizDatosIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 170, 50));
 
+        ModEstadoEquipo2.setBackground(new java.awt.Color(3, 155, 215));
+        ModEstadoEquipo2.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        ModEstadoEquipo2.setForeground(new java.awt.Color(255, 255, 255));
+        ModEstadoEquipo2.setText("Modificar Estado");
+        ModEstadoEquipo2.setBorder(null);
+        ModEstadoEquipo2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        ModEstadoEquipo2.setFocusPainted(false);
+        ModEstadoEquipo2.setOpaque(true);
+        ModEstadoEquipo2.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(ModEstadoEquipo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 170, 50));
+
+        BotonRegresar.setBackground(new java.awt.Color(3, 155, 215));
+        BotonRegresar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonRegresar.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegresar.setText("Mis Datos");
+        BotonRegresar.setBorder(null);
+        BotonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegresar.setFocusPainted(false);
+        BotonRegresar.setOpaque(true);
+        BotonRegresar.setPreferredSize(new java.awt.Dimension(225, 25));
+        jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 170, 50));
+
+        Separador1.setBackground(new java.awt.Color(51, 51, 51));
+        Separador1.setForeground(new java.awt.Color(153, 153, 153));
+        Separador1.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
+        Separador1.setInheritsPopupMenu(true);
+        Separador1.setPreferredSize(new java.awt.Dimension(50, 40));
+        jPanel1.add(Separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 160, 200, 20));
+
+        Separador2.setBackground(new java.awt.Color(51, 51, 51));
+        Separador2.setForeground(new java.awt.Color(153, 153, 153));
+        Separador2.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
+        Separador2.setInheritsPopupMenu(true);
+        Separador2.setPreferredSize(new java.awt.Dimension(50, 40));
+        jPanel1.add(Separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 870, 20));
+
+        Separador3.setBackground(new java.awt.Color(51, 51, 51));
+        Separador3.setForeground(new java.awt.Color(153, 153, 153));
+        Separador3.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
+        Separador3.setInheritsPopupMenu(true);
+        Separador3.setPreferredSize(new java.awt.Dimension(50, 40));
+        jPanel1.add(Separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 160, 280, 20));
+
+        Separador4.setBackground(new java.awt.Color(51, 51, 51));
+        Separador4.setForeground(new java.awt.Color(153, 153, 153));
+        Separador4.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
+        Separador4.setInheritsPopupMenu(true);
+        Separador4.setPreferredSize(new java.awt.Dimension(50, 40));
+        jPanel1.add(Separador4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, 200, 20));
+
         InicioSecionLabel1.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
         InicioSecionLabel1.setForeground(new java.awt.Color(49, 153, 214));
         InicioSecionLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         InicioSecionLabel1.setText("JEFE DE ENFERMERIA");
-        jPanel1.add(InicioSecionLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 140, 320, 40));
+        jPanel1.add(InicioSecionLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, 320, 40));
 
-        InicioSecionLabel2.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
+        InicioSecionLabel2.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 36)); // NOI18N
         InicioSecionLabel2.setForeground(new java.awt.Color(49, 153, 214));
         InicioSecionLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         InicioSecionLabel2.setText("Opciones Administrador");
-        jPanel1.add(InicioSecionLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 50, 320, 40));
+        jPanel1.add(InicioSecionLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 430, 40));
 
         InicioSecionLabel3.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
         InicioSecionLabel3.setForeground(new java.awt.Color(49, 153, 214));
         InicioSecionLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         InicioSecionLabel3.setText("EQUIPO");
-        jPanel1.add(InicioSecionLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 320, 40));
+        jPanel1.add(InicioSecionLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 320, 40));
 
         FondoInterfazRAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoOpciones.jpg"))); // NOI18N
         jPanel1.add(FondoInterfazRAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -238,17 +303,23 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonRegresar;
+    private javax.swing.JButton BotonVisualizarDatosPropios;
     private javax.swing.JButton FechaMantenimiento;
     private javax.swing.JLabel FondoInterfazRAdministrador;
     private javax.swing.JLabel InicioSecionLabel;
     private javax.swing.JLabel InicioSecionLabel1;
     private javax.swing.JLabel InicioSecionLabel2;
     private javax.swing.JLabel InicioSecionLabel3;
-    private javax.swing.JButton ModEstadoEquipo1;
+    private javax.swing.JButton ModEstadoEquipo2;
     private javax.swing.JButton ModPermisosIng1;
     private javax.swing.JButton RegistrarEquipo1;
     private javax.swing.JButton RegistrarIng;
     private javax.swing.JButton RegistrarJefeEnfermeria;
+    private javax.swing.JSeparator Separador1;
+    private javax.swing.JSeparator Separador2;
+    private javax.swing.JSeparator Separador3;
+    private javax.swing.JSeparator Separador4;
     private javax.swing.JButton VizDatosEquipo1;
     private javax.swing.JButton VizDatosIng;
     private javax.swing.JButton VizDatosJefeEnfermeria;
