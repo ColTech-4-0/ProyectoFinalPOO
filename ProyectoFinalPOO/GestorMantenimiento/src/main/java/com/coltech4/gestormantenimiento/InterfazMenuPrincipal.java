@@ -74,7 +74,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
                 xExitMouseExited(evt);
             }
         });
-        jPanel1.add(xExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, 30, 30));
+        jPanel1.add(xExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 0, 40, 40));
 
         BotonRegistrarAdministrador1.setBackground(new java.awt.Color(3, 155, 215));
         BotonRegistrarAdministrador1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
@@ -189,9 +189,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonOpcionesIngenieroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOpcionesIngenieroActionPerformed
-        this.BaseDatos.MostrarOpcionesIngeniero();
-                
-        
+            this.BaseDatos.MostrarOpcionesIngeniero();
     }//GEN-LAST:event_BotonOpcionesIngenieroActionPerformed
      
     private void BotonSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonSalirMouseClicked
