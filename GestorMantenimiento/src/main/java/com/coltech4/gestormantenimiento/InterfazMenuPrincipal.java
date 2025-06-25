@@ -195,7 +195,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonOpcionesIngenieroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOpcionesIngenieroActionPerformed
-            this.BaseDatos.MostrarOpcionesIngeniero();
+            this.BaseDatos.MostrarLoginIngeniero();
     }//GEN-LAST:event_BotonOpcionesIngenieroActionPerformed
      
     private void BotonSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonSalirMouseClicked

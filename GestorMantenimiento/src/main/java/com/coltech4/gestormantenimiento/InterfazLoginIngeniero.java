@@ -9,6 +9,8 @@ import javax.swing.JOptionPane;
 public class InterfazLoginIngeniero extends javax.swing.JFrame {
     //BaseDeDatos BaseDatos;
     private BaseDeDatos BaseDatos;
+    public int indice;
+    public static int guardar;
     
     //private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazLoginAdministrador.class.getName());
 
@@ -47,8 +49,8 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
         frase = new javax.swing.JLabel();
         BotonRegistrar = new javax.swing.JButton();
         BotonCancelar = new javax.swing.JButton();
-        FondoInterfazRAdministrador = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        FondoInterfazLoginIngeniero = new javax.swing.JLabel();
+        BarraX = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -151,32 +153,32 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
         });
         jPanel1.add(BotonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 110, 40));
 
-        FondoInterfazRAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoLoginGeneral.jpg"))); // NOI18N
-        jPanel1.add(FondoInterfazRAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        FondoInterfazLoginIngeniero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoLoginGeneral.jpg"))); // NOI18N
+        jPanel1.add(FondoInterfazLoginIngeniero, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        BarraX.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
-                jPanel2MouseDragged(evt);
+                BarraXMouseDragged(evt);
             }
         });
-        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        BarraX.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                jPanel2MousePressed(evt);
+                BarraXMousePressed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout BarraXLayout = new javax.swing.GroupLayout(BarraX);
+        BarraX.setLayout(BarraXLayout);
+        BarraXLayout.setHorizontalGroup(
+            BarraXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1000, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        BarraXLayout.setVerticalGroup(
+            BarraXLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 30, Short.MAX_VALUE)
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 30));
+        jPanel1.add(BarraX, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,7 +210,7 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
         return; // ← Salir si los campos están vacíos
     }
 
-    // Validar si hay administradores registrados
+    // Validar si hay ingenieros registrados
     if (BaseDatos.ingenieros.isEmpty()) {
         JOptionPane.showMessageDialog(
             rootPane,
@@ -224,8 +226,16 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
         if (BaseDatos.ingenieros.get(i).documento == Integer.parseInt(CampoDocumento.getText()) &&
             BaseDatos.ingenieros.get(i).nickname.equals(CampoNickname.getText())) {
             
+            indice = i;// se asigna un valor a la variable public
+            guardar = i; // se asigna un valor a la varible static 
+            
             // Coincidencia encontrada
-            this.BaseDatos.MostrarOpcionesIngeniero();
+            if (BaseDatos.ingenieros.get(i).permiso.equals("Deshabilitado")){
+                this.BaseDatos.MostrarOpcionesIngenieroSP();
+            }else{
+                this.BaseDatos.MostrarOpcionesIngeniero();
+            }          
+            
             this.setVisible(false); // Cerrar esta ventana
             return; // ← Salir del método
         }
@@ -253,16 +263,16 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CampoDocumentoKeyTyped
 
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+    private void BarraXMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraXMousePressed
         xMouse = evt.getX();
         yMouse = evt.getY();
-    }//GEN-LAST:event_jPanel2MousePressed
+    }//GEN-LAST:event_BarraXMousePressed
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+    private void BarraXMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraXMouseDragged
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();        
         this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_jPanel2MouseDragged
+    }//GEN-LAST:event_BarraXMouseDragged
 
     private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
         this.setVisible(false);
@@ -279,18 +289,18 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel BarraX;
     private javax.swing.JButton BotonCancelar;
     private javax.swing.JButton BotonRegistrar;
     private javax.swing.JTextField CampoDocumento;
     private javax.swing.JTextField CampoNickname;
     private javax.swing.JLabel DocumentoLabel;
-    private javax.swing.JLabel FondoInterfazRAdministrador;
+    private javax.swing.JLabel FondoInterfazLoginIngeniero;
     private javax.swing.JLabel IconoInicioSesion;
     private javax.swing.JLabel InicioSecionLabel;
     private javax.swing.JLabel NicknameLabel;
     private javax.swing.JLabel frase;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel xExit;
     // End of variables declaration//GEN-END:variables
 }

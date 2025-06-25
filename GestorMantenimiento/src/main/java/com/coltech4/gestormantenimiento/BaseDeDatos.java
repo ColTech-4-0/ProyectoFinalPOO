@@ -21,14 +21,11 @@ public class BaseDeDatos {
           
     }
 
-    public void RegistrarAdministrador(){
-                
+    public void RegistrarAdministrador(){       
         // Creamos una nueva ventana para registrar administrador
         InterfazRegistrarAdministrador administrador = new InterfazRegistrarAdministrador();
-        
         // Le pasamos esta misma instancia de BaseDeDatos para que pueda usar sus datos
         administrador.setBaseDeDatos(this); 
-        
         // Mostramos la nueva interfaz en pantalla
         administrador.setVisible(true);
     }
@@ -44,14 +41,27 @@ public class BaseDeDatos {
         opcion.setBaseDeDatos(this);
         opcion.setAdministrador(this.administrador.get(0));
         opcion.setVisible(true);
-
+    }
+    
+    public void MostrarLoginIngeniero(){
+        InterfazLoginIngeniero opcion = new InterfazLoginIngeniero();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true); 
     }
     
     public void MostrarOpcionesIngeniero(){
-        InterfazLoginIngeniero opcion = new InterfazLoginIngeniero();
+        InterfazOpcionesIngeniero opcion = new InterfazOpcionesIngeniero();
         opcion.setBaseDeDatos(this);
         opcion.setVisible(true);
-        
     }
+    
+    public void MostrarOpcionesIngenieroSP(){
+        InterfazOpcionesIngenieroSP opcion = new InterfazOpcionesIngenieroSP();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true);
+    }
+    
+    
+    
     
 }
