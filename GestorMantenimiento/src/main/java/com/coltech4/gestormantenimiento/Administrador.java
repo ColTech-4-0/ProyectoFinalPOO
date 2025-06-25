@@ -7,7 +7,7 @@ public class Administrador extends Persona {
         
     }
     
-    public void verDatosAdministrador() {
+    public void VerDatosAdministrador() {
     String mensaje = "     DATOS DEL ADMINISTRADOR\n"
                    + "Nombre: " + this.nombre + "\n"
                    + "Identificación: " + this.documento + "\n"
@@ -20,6 +20,12 @@ public class Administrador extends Persona {
         "Información del Administrador", // Título del cuadro
         JOptionPane.INFORMATION_MESSAGE // Ícono de información
     );
-}
+    }
+    
+    public void RegistrarEquipodeTrabajo(BaseDeDatos BaseDatos){
+        InterfazRegistrarEquipoTrabajo nuevo = new InterfazRegistrarEquipoTrabajo();
+        nuevo.setBaseDeDatos(BaseDatos);
+        nuevo.setVisible(true);
+    }
     
 }

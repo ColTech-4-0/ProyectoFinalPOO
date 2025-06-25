@@ -23,6 +23,7 @@ public class InterfazRegistrarAdministrador extends javax.swing.JFrame {
        // Este método nos permite recibir la instancia de BaseDeDatos creada en la interfaz Menu Principal
        // Así no se crea una nueva, sino que se reutiliza la que ya tiene toda la información del sistema
        this.BaseDatos = bd;
+       
     }
     
     
@@ -286,7 +287,7 @@ public class InterfazRegistrarAdministrador extends javax.swing.JFrame {
                 );
 
                 // Se muestran los datos registrados del administrador en pantalla
-                adm.verDatosAdministrador();
+                adm.VerDatosAdministrador();
             }else{
 
                 // Si ya hay un administrador registrado, se muestra una advertencia

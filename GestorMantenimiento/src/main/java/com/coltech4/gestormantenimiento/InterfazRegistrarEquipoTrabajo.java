@@ -24,6 +24,8 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
        // Este método nos permite recibir la instancia de BaseDeDatos creada en la interfaz Menu Principal
        // Así no se crea una nueva, sino que se reutiliza la que ya tiene toda la información del sistema
        this.BaseDatos = bd;
+       CampoCargo.setText("Ingeniero Tecnico");
+       CampoCargo.enable(false);
     }
     
     
@@ -35,22 +37,22 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         xExit = new javax.swing.JLabel();
         NombreLabel = new javax.swing.JLabel();
         DocumentoLabel = new javax.swing.JLabel();
-        NicknameLabel = new javax.swing.JLabel();
-        CampoCargo = new javax.swing.JLabel();
-        FechaFin = new javax.swing.JLabel();
-        FechaInicio1 = new javax.swing.JLabel();
-        EstadoPermiso = new javax.swing.JLabel();
-        ComboCargo = new javax.swing.JComboBox<>();
+        NicknameL = new javax.swing.JLabel();
+        CargoLabel = new javax.swing.JLabel();
+        FechaInicio = new javax.swing.JLabel();
+        FechaFinLabel = new javax.swing.JLabel();
+        EstadoPermisoLabel = new javax.swing.JLabel();
         CampoNombre = new javax.swing.JTextField();
         CampoDocumento = new javax.swing.JTextField();
         CampoNickname = new javax.swing.JTextField();
+        CampoCargo = new javax.swing.JTextField();
+        CampoFechaInicio = new com.toedter.calendar.JDateChooser();
+        CampoFechaFin = new com.toedter.calendar.JDateChooser();
+        ComboPermiso = new javax.swing.JComboBox<>();
         FraseRegistroUno = new javax.swing.JLabel();
         Separador1 = new javax.swing.JSeparator();
         BotonRegistrar = new javax.swing.JButton();
         BotonCancelar = new javax.swing.JButton();
-        Calendario1 = new com.toedter.calendar.JDateChooser();
-        Calendario2 = new com.toedter.calendar.JDateChooser();
-        ComboCargo1 = new javax.swing.JComboBox<>();
         FondoInterfazREquipoTrabajo = new javax.swing.JLabel();
         BarraX = new javax.swing.JPanel();
 
@@ -95,40 +97,39 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         DocumentoLabel.setText("Documento");
         jPanel1.add(DocumentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 170, 160, -1));
 
-        NicknameLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        NicknameLabel.setForeground(new java.awt.Color(3, 155, 215));
-        NicknameLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        NicknameLabel.setText("Fecha de Inicio de contrato");
-        jPanel1.add(NicknameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 240, -1));
+        NicknameL.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        NicknameL.setForeground(new java.awt.Color(3, 155, 215));
+        NicknameL.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        NicknameL.setText("Nickname");
+        jPanel1.add(NicknameL, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 140, -1));
 
-        CampoCargo.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        CampoCargo.setForeground(new java.awt.Color(3, 155, 215));
-        CampoCargo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        CampoCargo.setText("Nickname");
-        jPanel1.add(CampoCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 140, -1));
+        CargoLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        CargoLabel.setForeground(new java.awt.Color(3, 155, 215));
+        CargoLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        CargoLabel.setText("Cargo");
+        jPanel1.add(CargoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 140, -1));
 
-        FechaFin.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        FechaFin.setForeground(new java.awt.Color(3, 155, 215));
-        FechaFin.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        FechaFin.setText("Fecha de Inicio de contrato");
-        jPanel1.add(FechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 240, 20));
+        FechaInicio.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        FechaInicio.setForeground(new java.awt.Color(3, 155, 215));
+        FechaInicio.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FechaInicio.setText("Fecha de Inicio de contrato");
+        jPanel1.add(FechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 240, 20));
 
-        FechaInicio1.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        FechaInicio1.setForeground(new java.awt.Color(3, 155, 215));
-        FechaInicio1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        FechaInicio1.setText("Nickname");
-        jPanel1.add(FechaInicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 140, -1));
+        FechaFinLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        FechaFinLabel.setForeground(new java.awt.Color(3, 155, 215));
+        FechaFinLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FechaFinLabel.setText("Fecha de Inicio de contrato");
+        jPanel1.add(FechaFinLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 240, -1));
 
-        EstadoPermiso.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        EstadoPermiso.setForeground(new java.awt.Color(3, 155, 215));
-        EstadoPermiso.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        EstadoPermiso.setText("Estado permiso");
-        jPanel1.add(EstadoPermiso, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 140, -1));
-
-        ComboCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Habilitado", "Deshabilitado" }));
-        jPanel1.add(ComboCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 200, 30));
+        EstadoPermisoLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        EstadoPermisoLabel.setForeground(new java.awt.Color(3, 155, 215));
+        EstadoPermisoLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        EstadoPermisoLabel.setText("Estado permiso");
+        jPanel1.add(EstadoPermisoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 140, -1));
 
         CampoNombre.setBackground(new java.awt.Color(3, 155, 215));
+        CampoNombre.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        CampoNombre.setForeground(new java.awt.Color(255, 255, 255));
         CampoNombre.setBorder(null);
         CampoNombre.setPreferredSize(new java.awt.Dimension(108, 38));
         CampoNombre.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -139,6 +140,8 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         jPanel1.add(CampoNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 130, 200, 30));
 
         CampoDocumento.setBackground(new java.awt.Color(3, 155, 215));
+        CampoDocumento.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        CampoDocumento.setForeground(new java.awt.Color(255, 255, 255));
         CampoDocumento.setBorder(null);
         CampoDocumento.setPreferredSize(new java.awt.Dimension(108, 38));
         CampoDocumento.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -149,9 +152,26 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         jPanel1.add(CampoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 170, 200, 30));
 
         CampoNickname.setBackground(new java.awt.Color(3, 155, 215));
+        CampoNickname.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        CampoNickname.setForeground(new java.awt.Color(255, 255, 255));
         CampoNickname.setBorder(null);
         CampoNickname.setPreferredSize(new java.awt.Dimension(108, 38));
         jPanel1.add(CampoNickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 210, 200, 30));
+
+        CampoCargo.setBackground(new java.awt.Color(3, 155, 215));
+        CampoCargo.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        CampoCargo.setForeground(new java.awt.Color(255, 255, 255));
+        CampoCargo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        CampoCargo.setBorder(null);
+        CampoCargo.setPreferredSize(new java.awt.Dimension(108, 38));
+        jPanel1.add(CampoCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 200, 30));
+        jPanel1.add(CampoFechaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 200, 30));
+        jPanel1.add(CampoFechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 200, 30));
+
+        ComboPermiso.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        ComboPermiso.setForeground(new java.awt.Color(3, 155, 215));
+        ComboPermiso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Habilitado", "Deshabilitado" }));
+        jPanel1.add(ComboPermiso, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 200, 30));
 
         FraseRegistroUno.setBackground(new java.awt.Color(255, 255, 255));
         FraseRegistroUno.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
@@ -198,11 +218,6 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
             }
         });
         jPanel1.add(BotonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 150, 50));
-        jPanel1.add(Calendario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 200, 30));
-        jPanel1.add(Calendario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 200, 30));
-
-        ComboCargo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Ingeniero", "Jefe de Enfermería" }));
-        jPanel1.add(ComboCargo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 200, 30));
 
         FondoInterfazREquipoTrabajo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoOpciones.jpg"))); // NOI18N
         jPanel1.add(FondoInterfazREquipoTrabajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -258,7 +273,6 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoNombreKeyTyped
 
     private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
-       
         // Cierra solo esta ventana sin finalizar todo el programa
         this.setVisible(false); 
     }//GEN-LAST:event_BotonCancelarActionPerformed
@@ -274,48 +288,70 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
     }//GEN-LAST:event_CampoDocumentoKeyTyped
 
     private void BotonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarActionPerformed
-
-        // Verifica si alguno de los campos obligatorios está vacío
-        if (CampoNombre.getText().equals("")||CampoDocumento.getText().equals("")||CampoNickname.getText().equals("")){
-            // Muestra una advertencia si hay campos sin llenar
+        
+        boolean IngEncontrado = false;
+        int EstadoPermiso = ComboPermiso.getSelectedIndex();
+    
+        if (CampoNombre.getText().equals("") || CampoDocumento.getText().equals("") ||
+            CampoCargo.getText().equals("") || CampoNickname.getText().equals("") || EstadoPermiso == 0) {
+        
             JOptionPane.showMessageDialog(
                 rootPane,
                 "Por favor, complete todos los campos obligatorios.",
                 "Campos incompletos",
                 JOptionPane.WARNING_MESSAGE
             );
-        }else{
-            // Si la lista de administradores está vacía, se permite el registro
-            if (BaseDatos.administrador.isEmpty()){
-                // Se crea un nuevo objeto Administrador con los datos ingresados
-                Administrador adm = new Administrador(CampoNombre.getText(), Integer.parseInt(CampoDocumento.getText()), CampoNickname.getText(), "Administrador");
+        } else {
+            try {
+                String FechaInicio = new SimpleDateFormat("dd/MM/yyyy").format(CampoFechaInicio.getDate());
+                String FechaFin = new SimpleDateFormat("dd/MM/yyyy").format(CampoFechaFin.getDate());
+                int documento = Integer.parseInt(CampoDocumento.getText());
+            
+                // Verificar si ya existe
+                for (Ingenieros ing : this.BaseDatos.ingenieros) {
+                    if (ing.documento == documento) {
+                        JOptionPane.showMessageDialog(
+                            rootPane,
+                            "Ya se encuentra registrado un Ingeniero \ncon documento: " + documento,
+                            "Advertencia",
+                            JOptionPane.WARNING_MESSAGE
+                        );
+                        IngEncontrado = true;
+                        break;
+                    }
+                }
+            
+                // Si no lo encontró, lo agrega
+                if (!IngEncontrado) {
+                    String permiso = (String) ComboPermiso.getSelectedItem();
 
-                // Se añade el nuevo administrador a la lista en la base de datos
-                this.BaseDatos.administrador.add(adm);
+                    Ingenieros NuevoIng = new Ingenieros(
+                        FechaInicio, FechaFin, permiso,
+                        CampoNombre.getText(), documento,
+                        CampoNickname.getText(), CampoCargo.getText()
+                    );
 
-                // Muestra un mensaje informativo indicando que el registro fue exitoso
+                    this.BaseDatos.ingenieros.add(NuevoIng);
+
+                    JOptionPane.showMessageDialog(
+                        rootPane,
+                        "Ingeniero registrado con éxito",
+                        "Registro completado",
+                        JOptionPane.INFORMATION_MESSAGE
+                    );
+
+                    NuevoIng.VerDatosIngeniero();
+                    this.setVisible(false);
+                }
+            } catch (Exception e) {
                 JOptionPane.showMessageDialog(
                     rootPane,
-                    "Administrador registrado con éxito",
-                    "Registro completado",
-                    JOptionPane.INFORMATION_MESSAGE // Ícono de información
+                    "Por favor, complete todos los campos correctamente.",
+                    "Error en los datos",
+                    JOptionPane.WARNING_MESSAGE
                 );
-
-                // Se muestran los datos registrados del administrador en pantalla
-                adm.verDatosAdministrador();
-            }else{
-
-                // Si ya hay un administrador registrado, se muestra una advertencia
-                JOptionPane.showMessageDialog(
-                    rootPane,
-                    "Ya existe un administrador registrado", // Mensaje que se muestra
-                    "Advertencia",
-                    JOptionPane.WARNING_MESSAGE // Ícono de advertencia
-                );
-            }
-        }
-        // Cierra la ventana actual después del proceso de registro
-        this.setVisible(false);
+                }
+        }   
     }//GEN-LAST:event_BotonRegistrarActionPerformed
 
     private void BarraXMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraXMousePressed
@@ -347,21 +383,21 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
     private javax.swing.JPanel BarraX;
     private javax.swing.JButton BotonCancelar;
     private javax.swing.JButton BotonRegistrar;
-    private com.toedter.calendar.JDateChooser Calendario1;
-    private com.toedter.calendar.JDateChooser Calendario2;
-    private javax.swing.JLabel CampoCargo;
+    private javax.swing.JTextField CampoCargo;
     private javax.swing.JTextField CampoDocumento;
+    private com.toedter.calendar.JDateChooser CampoFechaFin;
+    private com.toedter.calendar.JDateChooser CampoFechaInicio;
     private javax.swing.JTextField CampoNickname;
     private javax.swing.JTextField CampoNombre;
-    private javax.swing.JComboBox<String> ComboCargo;
-    private javax.swing.JComboBox<String> ComboCargo1;
+    private javax.swing.JLabel CargoLabel;
+    private javax.swing.JComboBox<String> ComboPermiso;
     private javax.swing.JLabel DocumentoLabel;
-    private javax.swing.JLabel EstadoPermiso;
-    private javax.swing.JLabel FechaFin;
-    private javax.swing.JLabel FechaInicio1;
+    private javax.swing.JLabel EstadoPermisoLabel;
+    private javax.swing.JLabel FechaFinLabel;
+    private javax.swing.JLabel FechaInicio;
     private javax.swing.JLabel FondoInterfazREquipoTrabajo;
     private javax.swing.JLabel FraseRegistroUno;
-    private javax.swing.JLabel NicknameLabel;
+    private javax.swing.JLabel NicknameL;
     private javax.swing.JLabel NombreLabel;
     private javax.swing.JSeparator Separador1;
     private javax.swing.JPanel jPanel1;

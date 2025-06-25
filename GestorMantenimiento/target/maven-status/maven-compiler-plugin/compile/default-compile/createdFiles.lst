@@ -56,4 +56,5 @@ com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$5.class
 com\coltech4\gestormantenimiento\InterfazLoginIngeniero$6.class
 com\coltech4\gestormantenimiento\BaseDeDatos.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP.class
+com\coltech4\gestormantenimiento\InterfazOpcionesAdministrador$3.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$4.class

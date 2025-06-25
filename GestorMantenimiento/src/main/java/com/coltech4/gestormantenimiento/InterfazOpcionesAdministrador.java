@@ -48,6 +48,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         FondoInterfazRAdministrador = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(1022, 667));
 
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,7 +86,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         InicioSecionLabel.setForeground(new java.awt.Color(49, 153, 214));
         InicioSecionLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         InicioSecionLabel.setText("INGENIERO");
-        jPanel1.add(InicioSecionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 320, 40));
+        jPanel1.add(InicioSecionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 320, 40));
 
         VizDatosJefeEnfermeria.setBackground(new java.awt.Color(3, 155, 215));
         VizDatosJefeEnfermeria.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
@@ -130,6 +131,11 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         RegistrarIng.setFocusPainted(false);
         RegistrarIng.setOpaque(true);
         RegistrarIng.setPreferredSize(new java.awt.Dimension(225, 25));
+        RegistrarIng.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarIngActionPerformed(evt);
+            }
+        });
         jPanel1.add(RegistrarIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 170, 50));
 
         ModPermisosIng1.setBackground(new java.awt.Color(3, 155, 215));
@@ -224,6 +230,10 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     private void RegistrarEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarEquipo1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_RegistrarEquipo1ActionPerformed
+
+    private void RegistrarIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarIngActionPerformed
+        this.admin.RegistrarEquipodeTrabajo(BaseDatos);
+    }//GEN-LAST:event_RegistrarIngActionPerformed
 
     
    
