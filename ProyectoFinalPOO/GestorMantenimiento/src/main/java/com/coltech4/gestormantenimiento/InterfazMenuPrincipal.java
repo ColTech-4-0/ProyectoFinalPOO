@@ -3,6 +3,7 @@ package com.coltech4.gestormantenimiento;
 
 // Importación de la librería FlatLaf para aplicar un estilo visual moderno (FlatLightLaf)
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
 
 // Importación de UIManager para gestionar el estilo visual (Look and Feel)
 import javax.swing.UIManager;
@@ -15,7 +16,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     
   //  private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazMenuPrincipal.class.getName());
 
-    
+    int xMouse, yMouse;
     
     public InterfazMenuPrincipal() {
         initComponents();
@@ -34,18 +35,21 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        xExit = new javax.swing.JLabel();
         BotonRegistrarAdministrador1 = new javax.swing.JButton();
         BotonOpcionesAdministrador = new javax.swing.JButton();
         BotonOpcionesIngeniero = new javax.swing.JButton();
         BotonOpcionesJefeE = new javax.swing.JButton();
         BotonSalir = new javax.swing.JButton();
         FondoMenuPrincipal = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFocusCycleRoot(false);
         setLocationByPlatform(true);
         setMaximumSize(getPreferredSize());
-        setPreferredSize(new java.awt.Dimension(1022, 667));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1000, 635));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -54,6 +58,23 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
         jPanel1.setName(""); // NOI18N
         jPanel1.setPreferredSize(new java.awt.Dimension(1020, 635));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        xExit.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
+        xExit.setForeground(new java.awt.Color(255, 255, 255));
+        xExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        xExit.setText("X");
+        xExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                xExitMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                xExitMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                xExitMouseExited(evt);
+            }
+        });
+        jPanel1.add(xExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 0, 30, 30));
 
         BotonRegistrarAdministrador1.setBackground(new java.awt.Color(3, 155, 215));
         BotonRegistrarAdministrador1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
@@ -127,13 +148,37 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
         FondoMenuPrincipal.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jPanel1.add(FondoMenuPrincipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        jPanel2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                jPanel2MouseDragged(evt);
+            }
+        });
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jPanel2MousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1020, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1020, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 30, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,6 +219,40 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     private void BotonOpcionesAdministradorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonOpcionesAdministradorActionPerformed
         this.BaseDatos.AbrirLoginAdministrador();
     }//GEN-LAST:event_BotonOpcionesAdministradorActionPerformed
+
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+        xMouse = evt.getX();
+        yMouse = evt.getY();
+    }//GEN-LAST:event_jPanel2MousePressed
+
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();        
+        this.setLocation(x - xMouse, y - yMouse);
+    }//GEN-LAST:event_jPanel2MouseDragged
+
+    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
+        xExit.setForeground(Color.black);
+    }//GEN-LAST:event_xExitMouseEntered
+
+    private void xExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseExited
+        xExit.setForeground(Color.white);
+    }//GEN-LAST:event_xExitMouseExited
+
+    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
+       int opcion = JOptionPane.showConfirmDialog(
+            rootPane, // Componente raíz de la ventana actual
+            "¿Estás seguro de que deseas salir?", // Mensaje que se mostrará
+            "Confirmar salida", // Título del cuadro de diálogo
+            JOptionPane.YES_NO_OPTION, // Opciones: Sí / No
+            JOptionPane.QUESTION_MESSAGE// Ícono de signo de pregunta
+            );
+
+        // Si el usuario elige "Sí", se cierra la aplicación
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
+    }//GEN-LAST:event_xExitMouseClicked
 
     
     
@@ -222,5 +301,7 @@ public class InterfazMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton BotonSalir;
     private javax.swing.JLabel FondoMenuPrincipal;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel xExit;
     // End of variables declaration//GEN-END:variables
 }
