@@ -62,7 +62,7 @@ public class InterfazOpcionesIngeniero extends javax.swing.JFrame {
         xExit.setForeground(new java.awt.Color(255, 255, 255));
         xExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         xExit.setText("X");
-        xExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        xExit.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         xExit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 xExitMouseClicked(evt);
@@ -80,7 +80,7 @@ public class InterfazOpcionesIngeniero extends javax.swing.JFrame {
         jButton6.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setText("Regresar");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -92,35 +92,40 @@ public class InterfazOpcionesIngeniero extends javax.swing.JFrame {
         jButton5.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setText("Asignar Fecha de Mantenimiento");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 309, 50));
 
         jButton4.setBackground(new java.awt.Color(3, 155, 215));
         jButton4.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Modificar Estado de Equipo");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 300, 309, 50));
 
         jButton3.setBackground(new java.awt.Color(3, 155, 215));
         jButton3.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Visualizar Datos de Equipo");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 230, 309, 50));
 
         jButton2.setBackground(new java.awt.Color(3, 155, 215));
         jButton2.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Registrar Equipo");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 309, 50));
 
         jButton1.setBackground(new java.awt.Color(3, 155, 215));
         jButton1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Visualizar Datos");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 90, 309, 50));
 
         Txt1.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
@@ -231,6 +236,10 @@ public class InterfazOpcionesIngeniero extends javax.swing.JFrame {
         int y = evt.getYOnScreen();        
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel2MouseDragged
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+     this.BaseDatos.MostrarRegistroEq();        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     
    

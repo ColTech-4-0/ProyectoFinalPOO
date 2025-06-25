@@ -61,6 +61,12 @@ public class BaseDeDatos {
         opcion.setVisible(true);
     }
     
+    public void MostrarRegistroEq(){
+        InterfazRegistroEq opcion = new InterfazRegistroEq();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true);
+    }
+    
     
     
     
