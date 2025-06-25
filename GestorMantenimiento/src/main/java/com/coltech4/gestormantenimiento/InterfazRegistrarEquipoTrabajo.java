@@ -2,7 +2,8 @@
 package com.coltech4.gestormantenimiento;
 import java.awt.Color;
 import javax.swing.JOptionPane;
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 
@@ -36,18 +37,20 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         DocumentoLabel = new javax.swing.JLabel();
         NicknameLabel = new javax.swing.JLabel();
         CampoCargo = new javax.swing.JLabel();
+        FechaFin = new javax.swing.JLabel();
+        FechaInicio1 = new javax.swing.JLabel();
+        EstadoPermiso = new javax.swing.JLabel();
         ComboCargo = new javax.swing.JComboBox<>();
         CampoNombre = new javax.swing.JTextField();
         CampoDocumento = new javax.swing.JTextField();
         CampoNickname = new javax.swing.JTextField();
         FraseRegistroUno = new javax.swing.JLabel();
-        FraseRegistroUno2 = new javax.swing.JLabel();
-        FraseRegistroDos = new javax.swing.JLabel();
-        FraseRegistroDos1 = new javax.swing.JLabel();
         Separador1 = new javax.swing.JSeparator();
-        Separador2 = new javax.swing.JSeparator();
         BotonRegistrar = new javax.swing.JButton();
         BotonCancelar = new javax.swing.JButton();
+        Calendario1 = new com.toedter.calendar.JDateChooser();
+        Calendario2 = new com.toedter.calendar.JDateChooser();
+        ComboCargo1 = new javax.swing.JComboBox<>();
         FondoInterfazREquipoTrabajo = new javax.swing.JLabel();
         BarraX = new javax.swing.JPanel();
 
@@ -95,8 +98,8 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         NicknameLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         NicknameLabel.setForeground(new java.awt.Color(3, 155, 215));
         NicknameLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        NicknameLabel.setText("Nickname");
-        jPanel1.add(NicknameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 140, -1));
+        NicknameLabel.setText("Fecha de Inicio de contrato");
+        jPanel1.add(NicknameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, 240, -1));
 
         CampoCargo.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         CampoCargo.setForeground(new java.awt.Color(3, 155, 215));
@@ -104,8 +107,26 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         CampoCargo.setText("Nickname");
         jPanel1.add(CampoCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 220, 140, -1));
 
-        ComboCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Ingeniero", "Jefe de Enfermería", " " }));
-        jPanel1.add(ComboCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 200, 30));
+        FechaFin.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        FechaFin.setForeground(new java.awt.Color(3, 155, 215));
+        FechaFin.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FechaFin.setText("Fecha de Inicio de contrato");
+        jPanel1.add(FechaFin, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 240, 20));
+
+        FechaInicio1.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        FechaInicio1.setForeground(new java.awt.Color(3, 155, 215));
+        FechaInicio1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        FechaInicio1.setText("Nickname");
+        jPanel1.add(FechaInicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 260, 140, -1));
+
+        EstadoPermiso.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
+        EstadoPermiso.setForeground(new java.awt.Color(3, 155, 215));
+        EstadoPermiso.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        EstadoPermiso.setText("Estado permiso");
+        jPanel1.add(EstadoPermiso, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 140, -1));
+
+        ComboCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Habilitado", "Deshabilitado" }));
+        jPanel1.add(ComboCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 400, 200, 30));
 
         CampoNombre.setBackground(new java.awt.Color(3, 155, 215));
         CampoNombre.setBorder(null);
@@ -137,41 +158,16 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         FraseRegistroUno.setForeground(new java.awt.Color(3, 155, 215));
         FraseRegistroUno.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FraseRegistroUno.setText("REGISTRAR EQUIPO DE TRABAJO");
-        jPanel1.add(FraseRegistroUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 450, 70));
-
-        FraseRegistroUno2.setBackground(new java.awt.Color(255, 255, 255));
-        FraseRegistroUno2.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
-        FraseRegistroUno2.setForeground(new java.awt.Color(225, 162, 118));
-        FraseRegistroUno2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FraseRegistroUno2.setText(" equipos médicos. ");
-        jPanel1.add(FraseRegistroUno2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, 360, 450, 70));
-
-        FraseRegistroDos.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
-        FraseRegistroDos.setForeground(new java.awt.Color(225, 162, 118));
-        FraseRegistroDos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FraseRegistroDos.setText("sistema y añadir a tu equipo de trabajo. ");
-        jPanel1.add(FraseRegistroDos, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 400, 460, 80));
-
-        FraseRegistroDos1.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
-        FraseRegistroDos1.setForeground(new java.awt.Color(225, 162, 118));
-        FraseRegistroDos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        FraseRegistroDos1.setText("Este registro te permitirá configurar el ");
-        jPanel1.add(FraseRegistroDos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 360, 460, 80));
+        jPanel1.add(FraseRegistroUno, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 450, 70));
 
         Separador1.setBackground(new java.awt.Color(51, 51, 51));
         Separador1.setForeground(new java.awt.Color(153, 153, 153));
         Separador1.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
         Separador1.setInheritsPopupMenu(true);
         Separador1.setPreferredSize(new java.awt.Dimension(50, 40));
-        jPanel1.add(Separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 420, 20));
+        jPanel1.add(Separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 460, 20));
 
-        Separador2.setForeground(new java.awt.Color(225, 162, 118));
-        Separador2.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
-        Separador2.setInheritsPopupMenu(true);
-        Separador2.setPreferredSize(new java.awt.Dimension(50, 40));
-        jPanel1.add(Separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 360, 420, -1));
-
-        BotonRegistrar.setBackground(new java.awt.Color(225, 162, 118));
+        BotonRegistrar.setBackground(new java.awt.Color(3, 155, 215));
         BotonRegistrar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
         BotonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         BotonRegistrar.setText("Registrar");
@@ -185,9 +181,9 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
                 BotonRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 440, 150, 50));
+        jPanel1.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 470, 150, 50));
 
-        BotonCancelar.setBackground(new java.awt.Color(225, 162, 118));
+        BotonCancelar.setBackground(new java.awt.Color(3, 155, 215));
         BotonCancelar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
         BotonCancelar.setForeground(new java.awt.Color(255, 255, 255));
         BotonCancelar.setText("Cancelar");
@@ -201,7 +197,12 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
                 BotonCancelarActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 150, 50));
+        jPanel1.add(BotonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 150, 50));
+        jPanel1.add(Calendario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 200, 30));
+        jPanel1.add(Calendario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 200, 30));
+
+        ComboCargo1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "", "Ingeniero", "Jefe de Enfermería" }));
+        jPanel1.add(ComboCargo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 200, 30));
 
         FondoInterfazREquipoTrabajo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoOpciones.jpg"))); // NOI18N
         jPanel1.add(FondoInterfazREquipoTrabajo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -346,21 +347,23 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
     private javax.swing.JPanel BarraX;
     private javax.swing.JButton BotonCancelar;
     private javax.swing.JButton BotonRegistrar;
+    private com.toedter.calendar.JDateChooser Calendario1;
+    private com.toedter.calendar.JDateChooser Calendario2;
     private javax.swing.JLabel CampoCargo;
     private javax.swing.JTextField CampoDocumento;
     private javax.swing.JTextField CampoNickname;
     private javax.swing.JTextField CampoNombre;
     private javax.swing.JComboBox<String> ComboCargo;
+    private javax.swing.JComboBox<String> ComboCargo1;
     private javax.swing.JLabel DocumentoLabel;
+    private javax.swing.JLabel EstadoPermiso;
+    private javax.swing.JLabel FechaFin;
+    private javax.swing.JLabel FechaInicio1;
     private javax.swing.JLabel FondoInterfazREquipoTrabajo;
-    private javax.swing.JLabel FraseRegistroDos;
-    private javax.swing.JLabel FraseRegistroDos1;
     private javax.swing.JLabel FraseRegistroUno;
-    private javax.swing.JLabel FraseRegistroUno2;
     private javax.swing.JLabel NicknameLabel;
     private javax.swing.JLabel NombreLabel;
     private javax.swing.JSeparator Separador1;
-    private javax.swing.JSeparator Separador2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel xExit;
     // End of variables declaration//GEN-END:variables
