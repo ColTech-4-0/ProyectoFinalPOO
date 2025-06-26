@@ -27,5 +27,13 @@ public class Administrador extends Persona {
         nuevo.setBaseDeDatos(BaseDatos);
         nuevo.setVisible(true);
     }
+     
+    public void MostrarPermisos(BaseDeDatos BaseDatos){
+           
+       InterfazPermisos opcion = new   InterfazPermisos();
+       opcion.setBaseDeDatos(BaseDatos);
+       
     
+    }
 }
+
