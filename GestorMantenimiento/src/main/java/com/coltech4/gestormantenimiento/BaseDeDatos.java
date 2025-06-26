@@ -67,7 +67,36 @@ public class BaseDeDatos {
         opcion.setVisible(true);
     }
     
+    public void MostrarLoginJefeEnEnfermeria(){
+        InterfazLoginJefeEnEnfermeria opcion = new InterfazLoginJefeEnEnfermeria();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true); 
+    }
+    
+    public void InterfazRegistrarEnfermeria(){
+        InterfazRegistrarEnfermeria opcion = new InterfazRegistrarEnfermeria();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true);
+    
+    }
+    
+    public void MostrarOpcionesJefeDeEnfermeria(){
+        InterfazOpcionesJefeDeEnfermeria opcion = new InterfazOpcionesJefeDeEnfermeria();
+        opcion.setBaseDeDatos(this);
+        opcion.setVisible(true);
+    }
+    
+   
+   }
     
     
     
-}
+    
+    
+    
+   
+        
+    
+    
+    
+
