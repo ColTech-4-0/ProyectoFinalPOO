@@ -16,6 +16,8 @@ com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$6.class
 com\coltech4\gestormantenimiento\Administrador.class
 com\coltech4\gestormantenimiento\Equipos.class
+com\coltech4\gestormantenimiento\InterfazOpcionesAdministrador$4.class
+com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$6.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$1.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$1.class
 com\coltech4\gestormantenimiento\InterfazLoginIngeniero.class
@@ -31,6 +33,7 @@ com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$3.class
 com\coltech4\gestormantenimiento\Ingenieros.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$4.class
 com\coltech4\gestormantenimiento\InterfazRegistroEq$2.class
+com\coltech4\gestormantenimiento\InterfazOpcionesAdministrador$5.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$7.class
 com\coltech4\gestormantenimiento\InterfazRegistroEq$5.class
 com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$3.class
@@ -57,9 +60,12 @@ com\coltech4\gestormantenimiento\InterfazOpcionesIngeniero$1.class
 com\coltech4\gestormantenimiento\InterfazMenuPrincipal$3.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$5.class
 com\coltech4\gestormantenimiento\InterfazLoginIngeniero$3.class
+com\coltech4\gestormantenimiento\InterfazOpcionesAdministrador$6.class
+com\coltech4\gestormantenimiento\InterfazOpcionesIngenieroSP$7.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$6.class
 com\coltech4\gestormantenimiento\InterfazRegistrarEquipoTrabajo$2.class
 com\coltech4\gestormantenimiento\InterfazLoginAdministrador$2.class
+com\coltech4\gestormantenimiento\InterfazRegistroEq$7.class
 com\coltech4\gestormantenimiento\InterfazRegistrarAdministrador$5.class
 com\coltech4\gestormantenimiento\InterfazLoginIngeniero$6.class
 com\coltech4\gestormantenimiento\BaseDeDatos.class

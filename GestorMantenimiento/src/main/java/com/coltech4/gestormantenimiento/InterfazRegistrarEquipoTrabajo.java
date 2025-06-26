@@ -185,7 +185,7 @@ public class InterfazRegistrarEquipoTrabajo extends javax.swing.JFrame {
         Separador1.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
         Separador1.setInheritsPopupMenu(true);
         Separador1.setPreferredSize(new java.awt.Dimension(50, 40));
-        jPanel1.add(Separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 460, 20));
+        jPanel1.add(Separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 290, 520, 20));
 
         BotonRegistrar.setBackground(new java.awt.Color(3, 155, 215));
         BotonRegistrar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N

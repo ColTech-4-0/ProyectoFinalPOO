@@ -49,6 +49,7 @@ public class InterfazRegistroEq extends javax.swing.JFrame {
         IngresePlacaTxt = new javax.swing.JTextField();
         PlacaTxt = new javax.swing.JLabel();
         RegistrarBtn = new javax.swing.JButton();
+        BotonCancelar = new javax.swing.JButton();
         TxtRegistrarEq = new javax.swing.JLabel();
         Separator2 = new javax.swing.JSeparator();
         Separator1 = new javax.swing.JSeparator();
@@ -168,14 +169,26 @@ public class InterfazRegistroEq extends javax.swing.JFrame {
         RegistrarBtn.setBackground(new java.awt.Color(3, 155, 215));
         RegistrarBtn.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         RegistrarBtn.setForeground(new java.awt.Color(255, 255, 255));
-        RegistrarBtn.setText("Registrar");
+        RegistrarBtn.setText("Cancelar");
         RegistrarBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RegistrarBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrarBtnActionPerformed(evt);
             }
         });
-        jPanel1.add(RegistrarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 510, 140, 50));
+        jPanel1.add(RegistrarBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 510, 140, 50));
+
+        BotonCancelar.setBackground(new java.awt.Color(3, 155, 215));
+        BotonCancelar.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
+        BotonCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        BotonCancelar.setText("Registrar");
+        BotonCancelar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonCancelarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 510, 140, 50));
 
         TxtRegistrarEq.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         TxtRegistrarEq.setForeground(new java.awt.Color(3, 155, 215));
@@ -235,7 +248,7 @@ public class InterfazRegistroEq extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void RegistrarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarBtnActionPerformed
-        // TODO add your handling code here:
+        this.setVisible(false);
     }//GEN-LAST:event_RegistrarBtnActionPerformed
 
     private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
@@ -276,7 +289,12 @@ public class InterfazRegistroEq extends javax.swing.JFrame {
 
     }//GEN-LAST:event_IngresePlacaTxtMouseClicked
 
+    private void BotonCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonCancelarActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotonCancelar;
     private javax.swing.JComboBox<String> EstadoItem;
     private javax.swing.JLabel EstadoTxt;
     private javax.swing.JLabel FondoInterfazIngeniero;

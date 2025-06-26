@@ -10,7 +10,7 @@ public class InterfazLoginIngeniero extends javax.swing.JFrame {
     //BaseDeDatos BaseDatos;
     private BaseDeDatos BaseDatos;
     public int indice;
-    public static int guardar;
+    public static int guardar; // esta variable es para guardar el indice o posicion en la lista de Ingenieros del ingeniero que se acaba de logear
     
     //private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazLoginAdministrador.class.getName());
 

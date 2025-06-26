@@ -39,10 +39,12 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         xExit = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
         IconoInicioSesion = new javax.swing.JLabel();
         InicioSecionLabel = new javax.swing.JLabel();
         frase = new javax.swing.JLabel();
-        BotonRegistrar = new javax.swing.JButton();
+        BotonRegresar = new javax.swing.JButton();
+        BotonVisualizarDatos = new javax.swing.JButton();
         FondoInterfazRAdministrador = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -76,11 +78,15 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
 
         jSeparator1.setBackground(new java.awt.Color(58, 128, 177));
         jSeparator1.setForeground(new java.awt.Color(58, 128, 177));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 260, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 330, 290, 10));
+
+        jSeparator2.setBackground(new java.awt.Color(58, 128, 177));
+        jSeparator2.setForeground(new java.awt.Color(58, 128, 177));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 260, 10));
 
         IconoInicioSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        IconoInicioSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo1.jpg"))); // NOI18N
-        jPanel1.add(IconoInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 150, 160));
+        IconoInicioSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Logo1.png"))); // NOI18N
+        jPanel1.add(IconoInicioSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 200, 200));
 
         InicioSecionLabel.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 24)); // NOI18N
         InicioSecionLabel.setForeground(new java.awt.Color(49, 153, 214));
@@ -94,21 +100,37 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
         frase.setText("Sistema de Gestion de Mantenimiento de Equipos Medicos ");
         jPanel1.add(frase, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, 540, 50));
 
-        BotonRegistrar.setBackground(new java.awt.Color(3, 155, 215));
-        BotonRegistrar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
-        BotonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegistrar.setText("Visualizar Datos");
-        BotonRegistrar.setBorder(null);
-        BotonRegistrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegistrar.setFocusPainted(false);
-        BotonRegistrar.setOpaque(true);
-        BotonRegistrar.setPreferredSize(new java.awt.Dimension(225, 25));
-        BotonRegistrar.addActionListener(new java.awt.event.ActionListener() {
+        BotonRegresar.setBackground(new java.awt.Color(3, 155, 215));
+        BotonRegresar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonRegresar.setForeground(new java.awt.Color(255, 255, 255));
+        BotonRegresar.setText("Regresar");
+        BotonRegresar.setBorder(null);
+        BotonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonRegresar.setFocusPainted(false);
+        BotonRegresar.setOpaque(true);
+        BotonRegresar.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonRegresar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRegistrarActionPerformed(evt);
+                BotonRegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 370, 240, 50));
+        jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 360, 240, 50));
+
+        BotonVisualizarDatos.setBackground(new java.awt.Color(3, 155, 215));
+        BotonVisualizarDatos.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonVisualizarDatos.setForeground(new java.awt.Color(255, 255, 255));
+        BotonVisualizarDatos.setText("Visualizar Datos");
+        BotonVisualizarDatos.setBorder(null);
+        BotonVisualizarDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonVisualizarDatos.setFocusPainted(false);
+        BotonVisualizarDatos.setOpaque(true);
+        BotonVisualizarDatos.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonVisualizarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVisualizarDatosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonVisualizarDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 260, 240, 50));
 
         FondoInterfazRAdministrador.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FondoOpciones.jpg"))); // NOI18N
         jPanel1.add(FondoInterfazRAdministrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -188,35 +210,9 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel2MouseDragged
 
-    private void BotonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegistrarActionPerformed
-       if (BaseDatos != null && BaseDatos.ingenieroActivo != null) {
-    Ingenieros ingenieroParaMostrar = (Ingenieros) BaseDatos.ingenieroActivo;
-    // Opción 1: Concatenación mejorada
-    String mensaje = " DATOS DEL INGENIERO\n" +
-                    "Nombre: " + ingenieroParaMostrar.nombre + "\n" +
-                    "Identificación: " + ingenieroParaMostrar.documento + "\n" +
-                    "Nickname: " + ingenieroParaMostrar.nickname + "\n" +
-                    "Cargo: " + ingenieroParaMostrar.cargo + "\n" +
-                    "Fecha de Inicio: " + ingenieroParaMostrar.FechaInicio + "\n" +
-                    "Fecha de Fin: " + ingenieroParaMostrar.FechaFin + "\n" +
-                    "Permiso: " + ingenieroParaMostrar.permiso;
-    
-    
-    JOptionPane.showMessageDialog(
-        this,
-        mensaje,
-        "Información del Ingeniero",
-        JOptionPane.INFORMATION_MESSAGE
-    );
-} else {
-    JOptionPane.showMessageDialog(
-        this,
-        "No hay información de ingeniero disponible. Asegúrese de iniciar sesión.",
-        "Error",
-        JOptionPane.ERROR_MESSAGE
-    );
-}
-    }//GEN-LAST:event_BotonRegistrarActionPerformed
+    private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed
+       this.setVisible(false);
+    }//GEN-LAST:event_BotonRegresarActionPerformed
 
     private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
         this.setVisible(false);
@@ -241,10 +237,15 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
         this.setLocation(x - xMouse, y - yMouse);
     }//GEN-LAST:event_jPanel3MouseDragged
 
+    private void BotonVisualizarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosActionPerformed
+        this.BaseDatos.ingenieros.get(InterfazLoginIngeniero.guardar).VerDatosIngeniero();
+    }//GEN-LAST:event_BotonVisualizarDatosActionPerformed
+
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonRegistrar;
+    private javax.swing.JButton BotonRegresar;
+    private javax.swing.JButton BotonVisualizarDatos;
     private javax.swing.JLabel FondoInterfazRAdministrador;
     private javax.swing.JLabel IconoInicioSesion;
     private javax.swing.JLabel InicioSecionLabel;
@@ -253,6 +254,7 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel xExit;
     // End of variables declaration//GEN-END:variables
 }

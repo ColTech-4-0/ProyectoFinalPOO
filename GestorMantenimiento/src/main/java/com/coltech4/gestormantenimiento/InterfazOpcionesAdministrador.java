@@ -169,6 +169,11 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         BotonVisualizarDatosPropios.setFocusPainted(false);
         BotonVisualizarDatosPropios.setOpaque(true);
         BotonVisualizarDatosPropios.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonVisualizarDatosPropios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVisualizarDatosPropiosActionPerformed(evt);
+            }
+        });
         jPanel1.add(BotonVisualizarDatosPropios, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 170, 50));
 
         VizDatosEquipo1.setBackground(new java.awt.Color(3, 155, 215));
@@ -191,6 +196,11 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         VizDatosIng.setFocusPainted(false);
         VizDatosIng.setOpaque(true);
         VizDatosIng.setPreferredSize(new java.awt.Dimension(225, 25));
+        VizDatosIng.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VizDatosIngActionPerformed(evt);
+            }
+        });
         jPanel1.add(VizDatosIng, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 170, 50));
 
         ModEstadoEquipo2.setBackground(new java.awt.Color(3, 155, 215));
@@ -213,6 +223,11 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         BotonRegresar.setFocusPainted(false);
         BotonRegresar.setOpaque(true);
         BotonRegresar.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonRegresarActionPerformed(evt);
+            }
+        });
         jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 170, 50));
 
         Separador1.setBackground(new java.awt.Color(51, 51, 51));
@@ -299,6 +314,51 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     private void RegistrarIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarIngActionPerformed
         this.admin.RegistrarEquipodeTrabajo(BaseDatos);
     }//GEN-LAST:event_RegistrarIngActionPerformed
+
+    private void BotonVisualizarDatosPropiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosPropiosActionPerformed
+       this.setVisible(false);
+    }//GEN-LAST:event_BotonVisualizarDatosPropiosActionPerformed
+
+    private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed
+        this.admin.VerDatosAdministrador();
+    }//GEN-LAST:event_BotonRegresarActionPerformed
+
+    private void VizDatosIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VizDatosIngActionPerformed
+        int ide = -1;
+        boolean encontrado = false;
+
+        while (true) {
+            String input = JOptionPane.showInputDialog(null, "Ingrese el documento del Ingeniero:");
+
+            if (input == null) {
+                // El usuario canceló la operación
+                JOptionPane.showMessageDialog(null, "Operación cancelada.");
+                return;
+            }
+
+            try {
+                ide = Integer.parseInt(input);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor, ingrese un número válido.");
+            }
+        }
+
+        // Búsqueda con índice
+        for (int i = 0; i < this.BaseDatos.ingenieros.size(); i++) {
+            if (this.BaseDatos.ingenieros.get(i).documento == ide) {
+                this.BaseDatos.ingenieros.get(i).VerDatosIngeniero();
+                encontrado = true;
+                return; // Terminamos si lo encontró
+            }
+        }
+
+        // Si no se encontró ningún ingeniero
+        if (!encontrado) {
+            JOptionPane.showMessageDialog(null, "No se encontró un ingeniero con el documento: " + ide);
+        }
+
+    }//GEN-LAST:event_VizDatosIngActionPerformed
 
     
    
