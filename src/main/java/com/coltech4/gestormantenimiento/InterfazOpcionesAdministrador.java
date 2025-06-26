@@ -27,7 +27,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -43,8 +43,8 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         VizDatosEquipo1 = new javax.swing.JButton();
         VizDatosIng = new javax.swing.JButton();
         ModEstadoEquipo2 = new javax.swing.JButton();
-        BotonRegresar = new javax.swing.JButton();
-        BotonVisualizarDatosPropios1 = new javax.swing.JButton();
+        BotonMisdatos = new javax.swing.JButton();
+        RegresarBoton = new javax.swing.JButton();
         Separador1 = new javax.swing.JSeparator();
         Separador2 = new javax.swing.JSeparator();
         Separador3 = new javax.swing.JSeparator();
@@ -159,6 +159,11 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         ModPermisosIng1.setFocusPainted(false);
         ModPermisosIng1.setOpaque(true);
         ModPermisosIng1.setPreferredSize(new java.awt.Dimension(225, 25));
+        ModPermisosIng1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ModPermisosIng1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(ModPermisosIng1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 330, 170, 50));
 
         BotonVisualizarDatosPropios.setBackground(new java.awt.Color(3, 155, 215));
@@ -215,37 +220,37 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         ModEstadoEquipo2.setPreferredSize(new java.awt.Dimension(225, 25));
         jPanel1.add(ModEstadoEquipo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 330, 170, 50));
 
-        BotonRegresar.setBackground(new java.awt.Color(3, 155, 215));
-        BotonRegresar.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
-        BotonRegresar.setForeground(new java.awt.Color(255, 255, 255));
-        BotonRegresar.setText("Mis Datos");
-        BotonRegresar.setBorder(null);
-        BotonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonRegresar.setFocusPainted(false);
-        BotonRegresar.setOpaque(true);
-        BotonRegresar.setPreferredSize(new java.awt.Dimension(225, 25));
-        BotonRegresar.addActionListener(new java.awt.event.ActionListener() {
+        BotonMisdatos.setBackground(new java.awt.Color(3, 155, 215));
+        BotonMisdatos.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonMisdatos.setForeground(new java.awt.Color(255, 255, 255));
+        BotonMisdatos.setText("Mis Datos");
+        BotonMisdatos.setBorder(null);
+        BotonMisdatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonMisdatos.setFocusPainted(false);
+        BotonMisdatos.setOpaque(true);
+        BotonMisdatos.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonMisdatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonRegresarActionPerformed(evt);
+                BotonMisdatosActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 170, 50));
+        jPanel1.add(BotonMisdatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 170, 50));
 
-        BotonVisualizarDatosPropios1.setBackground(new java.awt.Color(3, 155, 215));
-        BotonVisualizarDatosPropios1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
-        BotonVisualizarDatosPropios1.setForeground(new java.awt.Color(255, 255, 255));
-        BotonVisualizarDatosPropios1.setText("Regresar");
-        BotonVisualizarDatosPropios1.setBorder(null);
-        BotonVisualizarDatosPropios1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        BotonVisualizarDatosPropios1.setFocusPainted(false);
-        BotonVisualizarDatosPropios1.setOpaque(true);
-        BotonVisualizarDatosPropios1.setPreferredSize(new java.awt.Dimension(225, 25));
-        BotonVisualizarDatosPropios1.addActionListener(new java.awt.event.ActionListener() {
+        RegresarBoton.setBackground(new java.awt.Color(3, 155, 215));
+        RegresarBoton.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        RegresarBoton.setForeground(new java.awt.Color(255, 255, 255));
+        RegresarBoton.setText("Regresar");
+        RegresarBoton.setBorder(null);
+        RegresarBoton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        RegresarBoton.setFocusPainted(false);
+        RegresarBoton.setOpaque(true);
+        RegresarBoton.setPreferredSize(new java.awt.Dimension(225, 25));
+        RegresarBoton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonVisualizarDatosPropios1ActionPerformed(evt);
+                RegresarBotonActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonVisualizarDatosPropios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, 170, 50));
+        jPanel1.add(RegresarBoton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, 170, 50));
 
         Separador1.setBackground(new java.awt.Color(51, 51, 51));
         Separador1.setForeground(new java.awt.Color(153, 153, 153));
@@ -310,29 +315,29 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
+    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {                                   
         this.setVisible(false);
-    }//GEN-LAST:event_xExitMouseClicked
+    }                                  
 
-    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
+    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {                                   
         xExit.setForeground(Color.black);
-    }//GEN-LAST:event_xExitMouseEntered
+    }                                  
 
-    private void xExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseExited
+    private void xExitMouseExited(java.awt.event.MouseEvent evt) {                                  
         xExit.setForeground(Color.white);
-    }//GEN-LAST:event_xExitMouseExited
+    }                                 
 
-    private void RegistrarEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarEquipo1ActionPerformed
+    private void RegistrarEquipo1ActionPerformed(java.awt.event.ActionEvent evt) {                                                 
         // TODO add your handling code here:
-    }//GEN-LAST:event_RegistrarEquipo1ActionPerformed
+    }                                                
 
-    private void RegistrarIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarIngActionPerformed
+    private void RegistrarIngActionPerformed(java.awt.event.ActionEvent evt) {                                             
         this.admin.RegistrarEquipodeTrabajo(BaseDatos);
-    }//GEN-LAST:event_RegistrarIngActionPerformed
+    }                                            
 
-    private void BotonVisualizarDatosPropiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosPropiosActionPerformed
+    private void BotonVisualizarDatosPropiosActionPerformed(java.awt.event.ActionEvent evt) {                                                            
        // Muestra un cuadro de confirmación al usuario antes de cerrar la aplicación
         int opcion = JOptionPane.showConfirmDialog(
             rootPane, // Componente raíz de la ventana actual
@@ -346,13 +351,14 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         if (opcion == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
-    }//GEN-LAST:event_BotonVisualizarDatosPropiosActionPerformed
+    }                                                           
 
-    private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed
-        this.admin.VerDatosAdministrador();
-    }//GEN-LAST:event_BotonRegresarActionPerformed
+    private void BotonMisdatosActionPerformed(java.awt.event.ActionEvent evt) {                                              
 
-    private void VizDatosIngActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VizDatosIngActionPerformed
+      this.admin.VerDatosAdministrador();
+    }                                             
+
+    private void VizDatosIngActionPerformed(java.awt.event.ActionEvent evt) {                                            
         int ide = -1;
         boolean encontrado = false;
 
@@ -387,18 +393,21 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "No se encontró un ingeniero con el documento: " + ide);
         }
 
-    }//GEN-LAST:event_VizDatosIngActionPerformed
+    }                                           
 
-    private void BotonVisualizarDatosPropios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosPropios1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonVisualizarDatosPropios1ActionPerformed
+    private void RegresarBotonActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        this.setVisible(false);
+    }                                             
+
+    private void ModPermisosIng1ActionPerformed(java.awt.event.ActionEvent evt) {                                                
+       this.admin.MostrarPermisos(BaseDatos);
+    }                                               
 
     
    
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton BotonRegresar;
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton BotonMisdatos;
     private javax.swing.JButton BotonVisualizarDatosPropios;
-    private javax.swing.JButton BotonVisualizarDatosPropios1;
     private javax.swing.JButton FechaMantenimiento;
     private javax.swing.JLabel FondoInterfazRAdministrador;
     private javax.swing.JLabel InicioSecionLabel;
@@ -410,6 +419,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton RegistrarEquipo1;
     private javax.swing.JButton RegistrarIng;
     private javax.swing.JButton RegistrarJefeEnfermeria;
+    private javax.swing.JButton RegresarBoton;
     private javax.swing.JSeparator Separador1;
     private javax.swing.JSeparator Separador2;
     private javax.swing.JSeparator Separador3;
@@ -419,5 +429,6 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton VizDatosJefeEnfermeria;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel xExit;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
+
