@@ -44,6 +44,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         VizDatosIng = new javax.swing.JButton();
         ModEstadoEquipo2 = new javax.swing.JButton();
         BotonRegresar = new javax.swing.JButton();
+        BotonVisualizarDatosPropios1 = new javax.swing.JButton();
         Separador1 = new javax.swing.JSeparator();
         Separador2 = new javax.swing.JSeparator();
         Separador3 = new javax.swing.JSeparator();
@@ -115,7 +116,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         FechaMantenimiento.setFocusPainted(false);
         FechaMantenimiento.setOpaque(true);
         FechaMantenimiento.setPreferredSize(new java.awt.Dimension(225, 25));
-        jPanel1.add(FechaMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 460, 270, 50));
+        jPanel1.add(FechaMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 400, 240, 50));
 
         RegistrarEquipo1.setBackground(new java.awt.Color(3, 155, 215));
         RegistrarEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
@@ -163,7 +164,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         BotonVisualizarDatosPropios.setBackground(new java.awt.Color(3, 155, 215));
         BotonVisualizarDatosPropios.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
         BotonVisualizarDatosPropios.setForeground(new java.awt.Color(255, 255, 255));
-        BotonVisualizarDatosPropios.setText("Regresar");
+        BotonVisualizarDatosPropios.setText("Salir");
         BotonVisualizarDatosPropios.setBorder(null);
         BotonVisualizarDatosPropios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BotonVisualizarDatosPropios.setFocusPainted(false);
@@ -174,7 +175,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
                 BotonVisualizarDatosPropiosActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonVisualizarDatosPropios, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 460, 170, 50));
+        jPanel1.add(BotonVisualizarDatosPropios, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 500, 170, 50));
 
         VizDatosEquipo1.setBackground(new java.awt.Color(3, 155, 215));
         VizDatosEquipo1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
@@ -228,7 +229,23 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
                 BotonRegresarActionPerformed(evt);
             }
         });
-        jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 460, 170, 50));
+        jPanel1.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 500, 170, 50));
+
+        BotonVisualizarDatosPropios1.setBackground(new java.awt.Color(3, 155, 215));
+        BotonVisualizarDatosPropios1.setFont(new java.awt.Font("Roboto Condensed SemiBold", 0, 18)); // NOI18N
+        BotonVisualizarDatosPropios1.setForeground(new java.awt.Color(255, 255, 255));
+        BotonVisualizarDatosPropios1.setText("Regresar");
+        BotonVisualizarDatosPropios1.setBorder(null);
+        BotonVisualizarDatosPropios1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BotonVisualizarDatosPropios1.setFocusPainted(false);
+        BotonVisualizarDatosPropios1.setOpaque(true);
+        BotonVisualizarDatosPropios1.setPreferredSize(new java.awt.Dimension(225, 25));
+        BotonVisualizarDatosPropios1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BotonVisualizarDatosPropios1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(BotonVisualizarDatosPropios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 500, 170, 50));
 
         Separador1.setBackground(new java.awt.Color(51, 51, 51));
         Separador1.setForeground(new java.awt.Color(153, 153, 153));
@@ -242,7 +259,7 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
         Separador2.setFont(new java.awt.Font("Roboto SemiBold", 0, 14)); // NOI18N
         Separador2.setInheritsPopupMenu(true);
         Separador2.setPreferredSize(new java.awt.Dimension(50, 40));
-        jPanel1.add(Separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 870, 20));
+        jPanel1.add(Separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 470, 870, 20));
 
         Separador3.setBackground(new java.awt.Color(51, 51, 51));
         Separador3.setForeground(new java.awt.Color(153, 153, 153));
@@ -316,7 +333,19 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
     }//GEN-LAST:event_RegistrarIngActionPerformed
 
     private void BotonVisualizarDatosPropiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosPropiosActionPerformed
-       this.setVisible(false);
+       // Muestra un cuadro de confirmación al usuario antes de cerrar la aplicación
+        int opcion = JOptionPane.showConfirmDialog(
+            rootPane, // Componente raíz de la ventana actual
+            "¿Estás seguro de que deseas salir?", // Mensaje que se mostrará
+            "Confirmar salida", // Título del cuadro de diálogo
+            JOptionPane.YES_NO_OPTION, // Opciones: Sí / No
+            JOptionPane.QUESTION_MESSAGE// Ícono de signo de pregunta
+            );
+
+        // Si el usuario elige "Sí", se cierra la aplicación
+        if (opcion == JOptionPane.YES_OPTION) {
+            System.exit(0);
+        }
     }//GEN-LAST:event_BotonVisualizarDatosPropiosActionPerformed
 
     private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed
@@ -360,11 +389,16 @@ public class InterfazOpcionesAdministrador extends javax.swing.JFrame {
 
     }//GEN-LAST:event_VizDatosIngActionPerformed
 
+    private void BotonVisualizarDatosPropios1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosPropios1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BotonVisualizarDatosPropios1ActionPerformed
+
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonRegresar;
     private javax.swing.JButton BotonVisualizarDatosPropios;
+    private javax.swing.JButton BotonVisualizarDatosPropios1;
     private javax.swing.JButton FechaMantenimiento;
     private javax.swing.JLabel FondoInterfazRAdministrador;
     private javax.swing.JLabel InicioSecionLabel;

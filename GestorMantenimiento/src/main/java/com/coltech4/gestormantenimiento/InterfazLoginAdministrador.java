@@ -90,10 +90,12 @@ public class InterfazLoginAdministrador extends javax.swing.JFrame {
         NicknameLabel.setText("Nickname");
         jPanel1.add(NicknameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 330, 140, -1));
 
+        CampoNickname.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         CampoNickname.setBorder(null);
         CampoNickname.setPreferredSize(new java.awt.Dimension(108, 38));
         jPanel1.add(CampoNickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 320, 140, 40));
 
+        CampoDocumento.setFont(new java.awt.Font("Roboto SemiCondensed SemiBold", 1, 18)); // NOI18N
         CampoDocumento.setBorder(null);
         CampoDocumento.setPreferredSize(new java.awt.Dimension(108, 38));
         CampoDocumento.addKeyListener(new java.awt.event.KeyAdapter() {
