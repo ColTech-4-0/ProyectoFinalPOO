@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 public class InterfazPermisos extends javax.swing.JFrame {
        private BaseDeDatos BaseDatos;
        private Administrador admin;
-       private String estadoActual;
+       public int indice;
     //private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(InterfazOpcionesAdministrador.class.getName());
 
        int xMouse, yMouse;
@@ -18,7 +18,51 @@ public class InterfazPermisos extends javax.swing.JFrame {
     }
 
     public void setBaseDeDatos(BaseDeDatos bd){  
-           this.BaseDatos = bd;
+        this.BaseDatos = bd;
+        int ide = -1;
+        boolean encontrado = false;
+
+        while (true) {
+            String input = JOptionPane.showInputDialog(null, "Ingrese el documento del Ingeniero:");
+
+            if (input == null) {
+                // El usuario canceló la operación
+                JOptionPane.showMessageDialog(null, "Operación cancelada.");
+                return;
+            }
+
+            try {
+                ide = Integer.parseInt(input);
+                break;
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(null, "Por favor, ingrese un número válido.");
+            }
+        }
+
+        // Búsqueda con índice
+        for (int i = 0; i < this.BaseDatos.ingenieros.size(); i++) {
+            if (this.BaseDatos.ingenieros.get(i).documento == ide) {
+                
+                IngreseDocTxt.setText(Integer.toString(this.BaseDatos.ingenieros.get(i).documento));
+                IngreseDocTxt.enable(false);
+                
+                IngreseNmTxt.setText(this.BaseDatos.ingenieros.get(i).nombre);
+                IngreseNmTxt.enable(false);
+                
+                TxtEstado.setText(this.BaseDatos.ingenieros.get(i).permiso);
+                TxtEstado.enable(false);
+                
+                encontrado = true;
+                indice = i;
+                this.setVisible(true);
+                return; // Terminamos si lo encontró
+            }
+        }
+
+        // Si no se encontró ningún ingeniero
+        if (!encontrado) {
+            JOptionPane.showMessageDialog(null, "No se encontró un ingeniero con el documento: " + ide);
+        }
     }
     
     public void setAdministrador(Administrador admin) {
@@ -28,7 +72,7 @@ public class InterfazPermisos extends javax.swing.JFrame {
     
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -57,7 +101,6 @@ public class InterfazPermisos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1000, 661));
         setResizable(false);
 
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -108,7 +151,6 @@ public class InterfazPermisos extends javax.swing.JFrame {
         Separator5.setForeground(new java.awt.Color(58, 128, 177));
         jPanel1.add(Separator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 170, 180, 10));
 
-        TxtEstado.setEditable(false);
         TxtEstado.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         TxtEstado.setForeground(new java.awt.Color(102, 102, 102));
         TxtEstado.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -116,7 +158,6 @@ public class InterfazPermisos extends javax.swing.JFrame {
         TxtEstado.setToolTipText("");
         TxtEstado.setBorder(null);
         TxtEstado.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
-        TxtEstado.setEnabled(false);
         TxtEstado.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 TxtEstadoMousePressed(evt);
@@ -143,6 +184,7 @@ public class InterfazPermisos extends javax.swing.JFrame {
 
         IngreseNmTxt.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         IngreseNmTxt.setForeground(new java.awt.Color(204, 204, 204));
+        IngreseNmTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         IngreseNmTxt.setText("Ingrese el nombre");
         IngreseNmTxt.setToolTipText("");
         IngreseNmTxt.setBorder(null);
@@ -166,6 +208,7 @@ public class InterfazPermisos extends javax.swing.JFrame {
 
         IngreseDocTxt.setFont(new java.awt.Font("Roboto", 0, 14)); // NOI18N
         IngreseDocTxt.setForeground(new java.awt.Color(204, 204, 204));
+        IngreseDocTxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         IngreseDocTxt.setText("Ingrese el documento");
         IngreseDocTxt.setToolTipText("");
         IngreseDocTxt.setBorder(null);
@@ -188,7 +231,7 @@ public class InterfazPermisos extends javax.swing.JFrame {
         jPanel1.add(IngreseDocTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 140, 180, 30));
 
         PlacaTxt.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
-        PlacaTxt.setText("Identificación:");
+        PlacaTxt.setText("Documento:");
         jPanel1.add(PlacaTxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 120, 30));
 
         RegresarBtn.setBackground(new java.awt.Color(3, 155, 215));
@@ -270,26 +313,36 @@ public class InterfazPermisos extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void CambiarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CambiarBtnActionPerformed
-        String seleccion = (String) PermisoItem.getSelectedItem();
+    private void CambiarBtnActionPerformed(java.awt.event.ActionEvent evt) {                                           
+      
+        int opcion;
+        String Permiso;
         
-        TxtEstado.setText(seleccion);
+        opcion = PermisoItem.getSelectedIndex();
+        if (opcion == 0){
+        JOptionPane.showMessageDialog(null, "No escogio una seleccion valida","Atencion",JOptionPane.WARNING_MESSAGE);
+                return;
+        }             
+        else {
+        Permiso=(String)PermisoItem.getSelectedItem();
+        this.BaseDatos.ingenieros.get(indice).permiso = Permiso;
+        this.setVisible(false);
+        }  
         
-        estadoActual = seleccion;       
         
-    }//GEN-LAST:event_CambiarBtnActionPerformed
+    }                                          
 
-    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
+    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {                                   
         xExit.setForeground(Color.black);
-    }//GEN-LAST:event_xExitMouseEntered
+    }                                  
 
-    private void xExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseExited
+    private void xExitMouseExited(java.awt.event.MouseEvent evt) {                                  
         xExit.setForeground(Color.white);
-    }//GEN-LAST:event_xExitMouseExited
+    }                                 
 
-    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
+    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {                                   
         int opcion = JOptionPane.showConfirmDialog(
             rootPane, // Componente raíz de la ventana actual
             "¿Estás seguro de que deseas salir?", // Mensaje que se mostrará
@@ -302,70 +355,70 @@ public class InterfazPermisos extends javax.swing.JFrame {
         if (opcion == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
-    }//GEN-LAST:event_xExitMouseClicked
+    }                                  
 
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {                                     
         xMouse = evt.getX();
         yMouse = evt.getY();
-    }//GEN-LAST:event_jPanel2MousePressed
+    }                                    
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {                                     
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();        
         this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_jPanel2MouseDragged
+    }                                    
 
-    private void IngreseDocTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngreseDocTxtActionPerformed
+    private void IngreseDocTxtActionPerformed(java.awt.event.ActionEvent evt) {                                              
         // TODO add your handling code here:
-    }//GEN-LAST:event_IngreseDocTxtActionPerformed
+    }                                             
 
-    private void IngreseDocTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngreseDocTxtMousePressed
+    private void IngreseDocTxtMousePressed(java.awt.event.MouseEvent evt) {                                           
          if (IngreseDocTxt.getText().equals("Ingrese el documento")) {
             IngreseDocTxt.setText("");
             IngreseDocTxt.setForeground(Color.black);
         }
-    }//GEN-LAST:event_IngreseDocTxtMousePressed
+    }                                          
 
-    private void IngresePlacaTxtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngresePlacaTxtMouseClicked
+    private void IngresePlacaTxtMouseClicked(java.awt.event.MouseEvent evt) {                                             
 
-    }//GEN-LAST:event_IngresePlacaTxtMouseClicked
+    }                                            
 
-    private void IngreseNmTxtMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IngreseNmTxtMousePressed
+    private void IngreseNmTxtMousePressed(java.awt.event.MouseEvent evt) {                                          
         if (IngreseNmTxt.getText().equals("Ingrese el nombre")) {
             IngreseNmTxt.setText("");
             IngreseNmTxt.setForeground(Color.black);
         }
-    }//GEN-LAST:event_IngreseNmTxtMousePressed
+    }                                         
 
-    private void IngreseNmTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngreseNmTxtActionPerformed
+    private void IngreseNmTxtActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-    }//GEN-LAST:event_IngreseNmTxtActionPerformed
+    }                                            
 
-    private void TxtEstadoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TxtEstadoMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TxtEstadoMousePressed
-
-    private void TxtEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtEstadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TxtEstadoActionPerformed
-
-    private void RegresarBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegresarBtnActionPerformed
+    private void RegresarBtnActionPerformed(java.awt.event.ActionEvent evt) {                                            
         this.setVisible(false);
-    }//GEN-LAST:event_RegresarBtnActionPerformed
+    }                                           
 
-    private void IngreseDocTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IngreseDocTxtKeyTyped
+    private void IngreseDocTxtKeyTyped(java.awt.event.KeyEvent evt) {                                       
         if  (Character.isDigit(evt.getKeyChar())!= true) {
             evt.consume();
         }
-    }//GEN-LAST:event_IngreseDocTxtKeyTyped
+    }                                      
 
-    private void IngreseNmTxtKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_IngreseNmTxtKeyTyped
+    private void IngreseNmTxtKeyTyped(java.awt.event.KeyEvent evt) {                                      
         if  (Character.isDigit(evt.getKeyChar())== true) {    
             evt.consume(); 
         }
-    }//GEN-LAST:event_IngreseNmTxtKeyTyped
+    }                                     
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private void TxtEstadoActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void TxtEstadoMousePressed(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+    }                                      
+
+    // Variables declaration - do not modify                     
     private javax.swing.JButton CambiarBtn;
     private javax.swing.JLabel CambiarPermisoTxt;
     private javax.swing.JLabel FondoInterfazIngeniero;
@@ -388,5 +441,5 @@ public class InterfazPermisos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel xExit;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
