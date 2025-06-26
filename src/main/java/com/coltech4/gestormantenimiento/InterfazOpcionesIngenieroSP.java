@@ -33,7 +33,7 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
     
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -197,53 +197,53 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MousePressed
+    private void jPanel2MousePressed(java.awt.event.MouseEvent evt) {                                     
         xMouse = evt.getX();
         yMouse = evt.getY();
-    }//GEN-LAST:event_jPanel2MousePressed
+    }                                    
 
-    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseDragged
+    private void jPanel2MouseDragged(java.awt.event.MouseEvent evt) {                                     
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();        
         this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_jPanel2MouseDragged
+    }                                    
 
-    private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonRegresarActionPerformed
+    private void BotonRegresarActionPerformed(java.awt.event.ActionEvent evt) {                                              
        this.setVisible(false);
-    }//GEN-LAST:event_BotonRegresarActionPerformed
+    }                                             
 
-    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseClicked
+    private void xExitMouseClicked(java.awt.event.MouseEvent evt) {                                   
         this.setVisible(false);
-    }//GEN-LAST:event_xExitMouseClicked
+    }                                  
 
-    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseEntered
+    private void xExitMouseEntered(java.awt.event.MouseEvent evt) {                                   
         xExit.setForeground(Color.black);
-    }//GEN-LAST:event_xExitMouseEntered
+    }                                  
 
-    private void xExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_xExitMouseExited
+    private void xExitMouseExited(java.awt.event.MouseEvent evt) {                                  
         xExit.setForeground(Color.white);
-    }//GEN-LAST:event_xExitMouseExited
+    }                                 
 
-    private void jPanel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MousePressed
+    private void jPanel3MousePressed(java.awt.event.MouseEvent evt) {                                     
         xMouse = evt.getX();
         yMouse = evt.getY();
-    }//GEN-LAST:event_jPanel3MousePressed
+    }                                    
 
-    private void jPanel3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseDragged
+    private void jPanel3MouseDragged(java.awt.event.MouseEvent evt) {                                     
         int x = evt.getXOnScreen();
         int y = evt.getYOnScreen();        
         this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_jPanel3MouseDragged
+    }                                    
 
-    private void BotonVisualizarDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonVisualizarDatosActionPerformed
+    private void BotonVisualizarDatosActionPerformed(java.awt.event.ActionEvent evt) {                                                     
         this.BaseDatos.ingenieros.get(InterfazLoginIngeniero.guardar).VerDatosIngeniero();
-    }//GEN-LAST:event_BotonVisualizarDatosActionPerformed
+    }                                                    
 
     
    
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton BotonRegresar;
     private javax.swing.JButton BotonVisualizarDatos;
     private javax.swing.JLabel FondoInterfazRAdministrador;
@@ -256,5 +256,5 @@ public class InterfazOpcionesIngenieroSP extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel xExit;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
